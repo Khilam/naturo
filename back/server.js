@@ -1,0 +1,27 @@
+const express = require('express')
+const app = express()
+const db = require ('./Config/db.js')
+db();
+const body = require('body-parser')
+app.use(express.json());
+const cors = require('cors')
+app.use(cors())
+// const userRouter = require('./Route/userRoute')
+
+
+//Product Route:
+
+const productRouter = require('./Route/productRoute')
+ app.use('/app/product', productRouter) 
+
+ //Paper Route:
+
+const paperRouter = require('./Route/paperRoute')
+app.use('/app/paper', paperRouter) 
+
+// Connect to DB
+const PORT = process.env.PORT || '4005'
+
+app.listen(PORT,()=>{
+    console.log(`server working ${PORT}`)
+})
