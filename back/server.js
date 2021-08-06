@@ -6,7 +6,11 @@ const body = require('body-parser')
 app.use(express.json());
 const cors = require('cors')
 app.use(cors())
-// const userRouter = require('./Route/userRoute')
+
+//Auth Route:
+
+ const authRouter = require('./Route/authRoute')
+ app.use('/app/auth', authRouter)
 
 
 //Product Route:
@@ -18,6 +22,7 @@ const productRouter = require('./Route/productRoute')
 
 const paperRouter = require('./Route/paperRoute')
 app.use('/app/paper', paperRouter) 
+
 
 // Connect to DB
 const PORT = process.env.PORT || '4005'
