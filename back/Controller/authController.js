@@ -1,5 +1,6 @@
 const User = require ('../Model/authModel') 
 const bcrypt = require ('bcrypt')
+const jwt = require('jsonwebtoken')
 
        //Add user: Register
        
@@ -9,12 +10,7 @@ exports.register = async (req, res)=>{
     const {name, lastname, phone, adresse, email, password} = req.body;
     try{
         const newUser = new User ({name, lastname, phone, adresse, email, password});
-        //vérifier si l'email existe
-        const searchedUser = await User.findOne({email})
-
-        if (searchedUser){
-            return res.status(400).send({msg:"email already exist "})
-        }
+       
         // Hash password
        const salt = 10;
        const genSalt = await bcrypt.genSalt(salt);
@@ -54,7 +50,7 @@ exports.login =  async (req, res)=>{
     //      _id: searchedUser._id
             
     //    };
-    //  const token = await jwt.sign(payload, process.env.SecretOrKey);
+    //  const token = await jwt.sign(payload, process.env.SecretKey);
     //       console.log(token);
         
         // send the user
