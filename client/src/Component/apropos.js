@@ -21,6 +21,7 @@ function Apropos() {
         </div>
         <div>
         <img  className="imageconcept" src={conceptnaturo} alt="fpage1"/>
+        <h3 className="titre2">NOS CONCEPTS</h3>
         </div>
         <div className="intro1">
     
@@ -28,6 +29,7 @@ function Apropos() {
         </div>
         <div>
         <img  className="imagenousommes" src={nousommes} alt="fpage1"/>
+        <h3 className="titre1">QUI SOMMES-NOUS</h3>
         </div>
         <div className="intro2">
 

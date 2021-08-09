@@ -6,6 +6,9 @@ import maladies from './../images/maladies.jpg'
 import phyto from './../images/phyto.jpg'
 import boutique from './../images/boutique.jpeg'
 import treemen from './../images/treeman.jpg'
+// import {FaPhone} from 'react-icons/fa'
+// import {ImHome} from 'react-icons/im'
+// import {IoIosMail} from 'react-icons/io'
 
 
 
@@ -99,6 +102,17 @@ Le but de ces consultations est de vous apporter une réponse globale à vos pro
     <p>Le naturopathe est un éducateur de santé.  Il établit un bilan de vitalité personnalisé et vous permet de mieux vous connaître. Vous prendrez conscience de vos forces et de vos faiblesses, de votre niveau d’énergie vitale. Vous repartirez avec une meilleure connaissance de votre organisme. Ensemble, vous établirez un programme qui vous permettra d’optimiser votre forme : alimentation, habitudes de vie à mettre en place, conseils phytothérapie et aromathérapie. Le rôle du naturopathe est ainsi de vous rendre le plus informé possible et le plus autonome vis-à-vis de votre santé.</p>
 </div>
 </div>
+ {/* <div className="contacter-nous">
+    <h5 className="contactnous">Contactez-Nous</h5>
+ <a href="#search" className="contact"><FaPhone/><h6>92 196 546 </h6></a>
+ <a href="#search" className="contact"><ImHome/><h6>Naturopathie, 44 Le bardo 2000, Tunis</h6></a>
+ <a href="#search" className="contact"><IoIosMail/><h6>natoropathie@gmail.com</h6></a>
+
+</div>  */}
+
+
+
+
 </div>
 
   

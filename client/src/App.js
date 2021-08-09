@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
       <Route exact path="/" component={Home}/>
       <Route path="/apropos" component={Apropos}/>
-      <main style={{minHeight:"12vh"}}></main>
+      {/* <main style={{minHeight:"12vh"}}></main> */}
    <Footer/>
     </div>
   );
