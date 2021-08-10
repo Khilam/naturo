@@ -21,6 +21,7 @@ function Navbar() {
                         <a href="#Beauté" className="nav-item nav-link">Beauté</a>
                         <a href="#Boutique" className="nav-item nav-link">Boutique</a>
                         <a href="apropos" className="nav-item nav-link">À propos </a>
+                        <a href="/" className="nav-item nav-link">Acceuil </a>
                         <a href="#sign" className="nav-item nav-link"><BsPersonFill/></a>
                         <a href="#panier" className="nav-item nav-link"><FaShoppingCart/></a>
                         <a href="#search" className="nav-item nav-link"><FaSearch/></a>

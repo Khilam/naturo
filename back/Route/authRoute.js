@@ -1,15 +1,24 @@
 const express = require ('express')
 const router = express.Router()
 const user = require ('../Controller/authController')
-//const jwt = require('jsonwebtoken');
-//const { loginRules, registerRules, validation } = require('../Middleware/validator');
 
-//Register :registerRules(), validation,
- router.post('/register',  user.register)
+const { loginRules, registerRules, validation } = require('../Middleware/validator');
+const jwt = require('jsonwebtoken');
+//const controllers = require('../Controller/authController');
+const isAuth = require('../Middleware/passport');
 
 
-//Login:loginRules(), validation, 
 
-router.post('/login', user.login)
+//Register :
+ router.post('/register', registerRules(), validation, user.register)
+
+
+//Login:
+
+router.post('/login', loginRules(), validation, user.login)
+
+ //Get current user: vérifier si l'utilisateur est encore logué
+
+ router.get('/current', isAuth(), user.current)
 
 module.exports = router

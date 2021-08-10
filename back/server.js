@@ -2,15 +2,19 @@ const express = require('express')
 const app = express()
 const db = require ('./Config/db.js')
 db();
+require('dotenv').config()
 const body = require('body-parser')
 app.use(express.json());
 const cors = require('cors')
 app.use(cors())
 
+
 //Auth Route:
 
  const authRouter = require('./Route/authRoute')
  app.use('/app/auth', authRouter)
+ 
+
 
 
 //Product Route:

@@ -18,11 +18,23 @@ exports.register = async (req, res)=>{
 
         // console.log(hashedPassword)
        newUser.password = hashedPassword;
+ 
+            
 
-       //Save user:Auth
-        await newUser.save();
+       //Generate a token + Save user:Auth
+     
+
+       const newUserToken= await newUser.save();
+
+        const payload = {
+            _id: newUserToken._id,
+            name:newUserToken.name
+               
+          };
+        const token = await jwt.sign(payload, process.env.SecretOrKey, {expiresIn: 3600});
+             console.log(token);
         res.status(200).send({newUser,
-            msg: 'user is saved' });
+            msg: 'user is saved' , token: `Bearer ${token}`});
     } catch (error) {
         res.status(500).send({ msg: 'can not save the user' });
     }
@@ -46,21 +58,27 @@ exports.login =  async (req, res)=>{
             return res.status(400).send({ msg: 'bad Credential' });
         }
     //     créer un token
-    //    const payload = {
-    //      _id: searchedUser._id
+       const payload = {
+         _id: searchedUser._id,
+         name:searchedUser.name
             
-    //    };
-    //  const token = await jwt.sign(payload, process.env.SecretKey);
-    //       console.log(token);
+       };
+     const token = await jwt.sign(payload, process.env.SecretOrKey, {expiresIn: 3600});
+          console.log(token);
         
         // send the user
-       res.status(200).send({user:searchedUser, msg:"success"});
+       res.status(200).send({user:searchedUser, msg:"success", token: `Bearer ${token}`});
     }catch (error){
       res.status(500).send({msg:"can not get the user2"});  
 
     }
 
-}
+};
+//Current user
+
+exports.current = (req, res) => {
+	res.status(200).send({ user: req.user });
+};
       
         
 
