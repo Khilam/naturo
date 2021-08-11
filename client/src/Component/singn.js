@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
  import { loginUser, registerUser } from '../Redux/Action/authAction.js';
 import './sing.css';
 const Signup = () => {
@@ -12,7 +12,7 @@ const Signup = () => {
 	const [password, setPassword] = useState('');
 	//const [role, setRole] = useState('searcher');
 	 const dispatch = useDispatch();
-	// const history = useHistory();
+	 const history = useHistory();
 	return (
 		
 				<div>
@@ -47,7 +47,7 @@ const Signup = () => {
 									type="submit"
 									className="button"
 									defaultValue="Sign In"
-									onClick={() => dispatch(loginUser({ email, password }))}
+									onClick={() => dispatch(loginUser({ email, password }, history))}
 								/>
 							</div>
 									  <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot your password?</a></p>
@@ -89,7 +89,7 @@ const Signup = () => {
 									className="button"
 									defaultValue="Sign Up"
 									onClick={() =>
-										dispatch(registerUser({ name, lastname, phone, adresse, email, password }))
+										dispatch(registerUser({ name, lastname, phone, adresse, email, password }, history))
 									}
 								/>
 							</div>

@@ -9,6 +9,7 @@ import Apropos from './Component/apropos';
 import Signup from './Component/singn';
 import Dashboard from './Page/Admin/dashboard';
 import { Switch} from 'react-router-dom';
+//import PrivateRoute from './Page/Router/privateRoute';
 
 
 function App() {

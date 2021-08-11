@@ -14,7 +14,7 @@ import axios from 'axios';
 export const registerUser = (user) => async (dispatch) => {
 	dispatch({ type: LOAD_USER });
 	try {
-		const result = await axios.post('/auth/register', user); //{newUser+msg+token}
+		const result = await axios.post('app/auth/register', user); //{newUser+msg+token}
 		dispatch({ type: REGISTER_USER, payload: result.data });
 	
 	} catch (error) {
@@ -25,7 +25,7 @@ export const registerUser = (user) => async (dispatch) => {
 export const loginUser = (user) => async (dispatch) => {
 	dispatch({ type: LOAD_USER });
 	try {
-		const result = await axios.post('/auth/login', user); //{newUser+msg+token}
+		const result = await axios.post('app/auth/login', user); //{newUser+msg+token}
 		dispatch({ type: LOGIN_USER, payload: result.data });
 	
 	} catch (error) {
