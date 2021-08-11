@@ -9,6 +9,7 @@ const isAuth = require('../Middleware/passport');
 
 
 
+
 //Register :
  router.post('/register', registerRules(), validation, user.register)
 

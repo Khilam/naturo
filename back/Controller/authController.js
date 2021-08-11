@@ -33,7 +33,7 @@ exports.register = async (req, res)=>{
           };
         const token = await jwt.sign(payload, process.env.SecretOrKey, {expiresIn: 3600});
              console.log(token);
-        res.status(200).send({newUser,
+        res.status(200).send({user: newUserToken,
             msg: 'user is saved' , token: `Bearer ${token}`});
     } catch (error) {
         res.status(500).send({ msg: 'can not save the user' });
