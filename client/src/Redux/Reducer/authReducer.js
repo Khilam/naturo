@@ -3,8 +3,9 @@ import {
 	LOAD_USER,
 	REGISTER_USER,
 	 LOGIN_USER,
+	 CURRENT_USER,
 	// FAIL_USER,
-	// LOGOUT_USER,
+	LOGOUT_USER,
 	
 } from '../Const/authConst.js';
 
@@ -29,13 +30,13 @@ export const userReducer = (state = initialState, { type, payload }) => {
 			return { ...state, loadUser: false, user: payload.user, isAuth: true };
 		case LOAD_USER:
 			return { ...state, loadUser: true };
-		// case CURRENT_USER:
-		// 	return { ...state, loadUser: false, isAuth: true, user: payload };
+		case CURRENT_USER:
+		 	return { ...state, loadUser: false, isAuth: true, user: payload };
 		case FAIL_USER:
 			return { ...state, loadUser: false, errors: payload };
-		// case LOGOUT_USER:
-		// 	localStorage.removeItem('token');
-		// 	return { user: null, loadUser: false, errors: null, isAuth: false };
+		 case LOGOUT_USER:
+			localStorage.removeItem('token');
+		return { user: null, loadUser: false, errors: null, isAuth: false };
 		// case GET_USERS:
 		// 	return { ...state, loadUsers: true };
 		// case GET_USERS_SUCCESS:

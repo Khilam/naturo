@@ -19,7 +19,13 @@ export const registerUser = (user, history) => async (dispatch) => {
 		dispatch({ type: REGISTER_USER, payload: result.data });
 	     history.push('/dashboard');
 	} catch (error) {
-		dispatch({type:FAIL_USER, payload:error.response.data})
+			const { errors, msg } = error.response.data;
+			if (Array.isArray(errors)) {
+				errors.forEach((err) => alert(err.msg));
+			}
+			if (msg) {
+				alert(msg);
+			}
 	}
 };
 
@@ -30,7 +36,13 @@ export const loginUser = (user, history) => async (dispatch) => {
 		dispatch({ type: LOGIN_USER, payload: result.data });
 	     history.push('/dashboard');
 	} catch (error) {
-		dispatch({type:FAIL_USER, payload:error.response.data})
+		const { errors, msg } = error.response.data;
+		if (Array.isArray(errors)) {
+			errors.forEach((err) => alert(err.msg));
+		}
+		if (msg) {
+			alert(msg);
+		}
 	}
 };
 
