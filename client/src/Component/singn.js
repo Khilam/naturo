@@ -45,7 +45,7 @@ const Signup = () => {
 									  <div className="group">
 								<input
 									type="submit"
-									className="button"
+									className="btn"
 									defaultValue="Sign In"
 									onClick={() => dispatch(loginUser({ email, password }, history))}
 								/>
@@ -84,9 +84,9 @@ const Signup = () => {
 										<i className="input-icon uil uil-lock-alt" />
 									  </div>
 									  <div className="group">
-								<input
+								<input 
 									type="submit"
-									className="button"
+									className="btn"
 									defaultValue="Sign Up"
 									onClick={() =>
 										dispatch(registerUser({ name, lastname, phone, adresse, email, password }, history))
