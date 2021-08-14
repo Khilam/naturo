@@ -8,13 +8,14 @@ module.exports = {
         addPaper:async (req, res)=>{
             
                
-           const {titre, contenu, image}=req.body
+           const {titre, contenu, image,  catégorie}=req.body
     
            try{
                paper= new Paper({
                 titre, 
                 contenu,
-                 image, 
+                 image,
+                 catégorie, 
                  
                })
                await paper.save()

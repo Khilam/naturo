@@ -7,9 +7,9 @@ const jwt = require('jsonwebtoken')
         
 exports.register = async (req, res)=>{
         
-    const {name, lastname, phone, adresse, email, password} = req.body;
+    const {name, lastname, phone, adresse, email, password, role} = req.body;
     try{
-        const newUser = new User ({name, lastname, phone, adresse, email, password});
+        const newUser = new User ({name, lastname, phone, adresse, email, password, role});
        
         // Hash password
        const salt = 10;

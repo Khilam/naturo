@@ -14,6 +14,7 @@ import { Switch} from 'react-router-dom';
 import PrivateRoute from './Page/Router/privateRoute';
 import './App.css';
 
+
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
       <Navbar/>
       <Switch>
       <Route exact path="/" component={Home}/>
+     
       <Route path="/apropos" component={Apropos}/>
       <Route path="/sign" component={Signup}/>
      

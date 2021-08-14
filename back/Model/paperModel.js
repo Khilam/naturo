@@ -14,6 +14,10 @@ const paperSchema = new Schema(
     image: {
       type: String,
       required: true,
+    },
+    catégorie: {
+      type:String,
+      required: true,
     }
    
 }

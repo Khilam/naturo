@@ -50,7 +50,7 @@ const Signup = () => {
 									onClick={() => dispatch(loginUser({ email, password }, history))}
 								/>
 							</div>
-									  <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot your password?</a></p>
+									  <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Vous n'avez pas de compte...Inscrivez-vous?</a></p>
 									</div>
 								  </div>
 								</div>

@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
 import { userReducer } from './authReducer';
-// import { profileReducer } from './profile';
-// import { publicationReducer } from './Publication';
-// import { reservationReducer } from './reservation';
+import { paperReducer } from './paperReducer';
+
 export const rootReducer = combineReducers({
-	userReducer,
-	// profileReducer,
-	// publicationReducer,
-	// reservationReducer,
+	 userReducer,
+	paper: paperReducer
+	
 });
