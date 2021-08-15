@@ -18,9 +18,9 @@ function Navbar() {
 
                 <div className="collapse navbar-collapse  " id="navbarCollapse">
                     <div className="navbar-nav  ml-auto">
-                        <a href="#Phyto" className="nav-item nav-link active phyto">Phytothérapie</a>
-                        <a href="#Maladies" className="nav-item nav-link">Maladies</a>
-                        <a href="#Beauté" className="nav-item nav-link">Beauté</a>
+                        <a href="Phyto" className="nav-item nav-link active phyto">Phytothérapie</a>
+                        <a href="Maladies" className="nav-item nav-link">Maladies</a>
+                        <a href="Beauté" className="nav-item nav-link">Beauté</a>
                         <a href="#Boutique" className="nav-item nav-link">Boutique</a>
                         <a href="apropos" className="nav-item nav-link">À propos </a>
                         <a href="/" className="nav-item nav-link">Acceuil </a>

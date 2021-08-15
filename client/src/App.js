@@ -13,6 +13,10 @@ import Dashboard from './Page/Admin/dashboard';
 import { Switch} from 'react-router-dom';
 import PrivateRoute from './Page/Router/privateRoute';
 import './App.css';
+import Phyto from './Page/phyto/phyto';
+import Beaute from './Page/beauté/beauté';
+import Maladie from './Page/maladie/maladie';
+
 
 
 function App() {
@@ -25,7 +29,9 @@ function App() {
       <Navbar/>
       <Switch>
       <Route exact path="/" component={Home}/>
-     
+     <Route path="/phyto" component={Phyto}/>
+     <Route path="/beauté" component={Beaute}/>
+     <Route path="/maladies" component={Maladie}/>
       <Route path="/apropos" component={Apropos}/>
       <Route path="/sign" component={Signup}/>
      
