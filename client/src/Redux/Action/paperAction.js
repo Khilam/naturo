@@ -28,3 +28,17 @@ export function getAllPapers() {
     }
 
 }
+
+export function getDetailPaper() {
+    return dispatch => {
+        fetchAllPapers()
+        .then (papers =>dispatch (
+            {type: "GET_DETAIL_PAPER_SUCCED",payload: papers}) 
+        )
+        .catch(err=>dispatch( {
+            type: "GET_DETAIL_PAPER_FAILED",
+            payload: err
+          }))
+    }
+
+}

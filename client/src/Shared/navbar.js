@@ -4,11 +4,16 @@ import { FaPagelines} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {FaShoppingCart} from 'react-icons/fa'
 import {FaSearch} from 'react-icons/fa'
+import { useDispatch, useSelector } from 'react-redux';
 
 import "./navbar.css"
 
 function Navbar() {
-    return (
+
+    
+	return (
+
+  
         <div >
  <h1 className="title" href="#home" >
       <FaPagelines/> NATUROPATHIE </h1> 
@@ -25,7 +30,9 @@ function Navbar() {
                         <a href="apropos" className="nav-item nav-link">À propos </a>
                         <a href="/" className="nav-item nav-link">Acceuil </a>
                         <a href="sign" className="nav-item nav-link"><BsPersonFill/></a>
-                      
+
+
+                     
                         <a href="#panier" className="nav-item nav-link"><FaShoppingCart/></a>
                         <a href="#search" className="nav-item nav-link"><FaSearch/></a>
                       

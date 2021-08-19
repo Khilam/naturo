@@ -35,3 +35,22 @@ export  const paperReducer = (state = mouna, action ) => {
     }
 return state
 };
+
+export  const paperDetailReducer = (state = mouna , action ) => {
+    const { type, payload } = action;
+    switch( type) {
+        case   "GET_DETAIL_PAPER_SUCCED":
+            return {
+                ...state,
+                datas: payload 
+              }
+            case   "ADD_DETAIL_PAPER_SUCCED":
+                return {
+                    ...state,
+                    datas: [...state.papers, payload]
+              
+                   }
+
+    }
+return state
+};

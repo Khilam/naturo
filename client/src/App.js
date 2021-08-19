@@ -16,6 +16,8 @@ import './App.css';
 import Phyto from './Page/phyto/phyto';
 import Beaute from './Page/beauté/beauté';
 import Maladie from './Page/maladie/maladie';
+import PageBeaute from './Page/beauté/pageBeaute';
+
 
 
 
@@ -32,10 +34,13 @@ function App() {
      <Route path="/phyto" component={Phyto}/>
      <Route path="/beauté" component={Beaute}/>
      <Route path="/maladies" component={Maladie}/>
+    
       <Route path="/apropos" component={Apropos}/>
       <Route path="/sign" component={Signup}/>
      
       <PrivateRoute exact path="/dashboard" component={Dashboard}/>
+
+      <Route exact path="/pageBeaute" component={PageBeaute}/>
       {/* <main style={{minHeight:"12vh"}}></main> */}
       </Switch>
    <Footer/>

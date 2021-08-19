@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
  import { loginUser, registerUser } from '../Redux/Action/authAction.js';
+ 
 import './sing.css';
 const Signup = () => {
 	const [name, setName] = useState('');
@@ -10,9 +11,11 @@ const Signup = () => {
 	const [adresse, setAdresse] = useState('');
     const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [role, setRole] = useState('');
 	//const [role, setRole] = useState('searcher');
 	 const dispatch = useDispatch();
 	 const history = useHistory();
+	
 	return (
 		
 				<div>
@@ -34,6 +37,7 @@ const Signup = () => {
 								  <div className="center-wrap">
 									<div className="section text-center">
 									  <h4 className="mb-4 pb-3">Log In</h4>
+				
 									  <div className="form-group">
 										<input type="email" name="logemail" className="form-style" placeholder="Your Email" id="logemail" autoComplete="off" onChange={(e) => setEmail(e.target.value)}/>
 										<i className="input-icon uil uil-at" />
@@ -47,7 +51,7 @@ const Signup = () => {
 									type="submit"
 									className="btn"
 									defaultValue="Sign In"
-									onClick={() => dispatch(loginUser({ email, password }, history))}
+									onClick={() => dispatch(loginUser({ email, password, role }, history))}
 								/>
 							</div>
 									  <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Vous n'avez pas de compte...Inscrivez-vous?</a></p>
@@ -89,7 +93,7 @@ const Signup = () => {
 									className="btn"
 									defaultValue="Sign Up"
 									onClick={() =>
-										dispatch(registerUser({ name, lastname, phone, adresse, email, password }, history))
+										dispatch(registerUser({ name, lastname, phone, adresse, email, password, role }, history))
 									}
 								/>
 							</div>

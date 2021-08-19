@@ -3,15 +3,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
 import { useHistory } from 'react-router'
 import { logout } from '../../Redux/Action/authAction'
-import {getAllPapers} from '../../Redux/Action/paperAction'
+import {current} from '../../Redux/Action/authAction'
+import { CURRENT_USER } from '../../Redux/Const/authConst'
 const Dashboard = () => {
     const dispatch=useDispatch();
     const history=useHistory();
     const paper = useSelector((state)=>state.paper.datas);
     useEffect (()=>{
-        dispatch(getAllPapers())
+        dispatch(CURRENT_USER())
     })
-    return (
+    return ( 
         <div>
             welcome to dashboard
 {

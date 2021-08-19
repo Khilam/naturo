@@ -7,9 +7,9 @@ const jwt = require('jsonwebtoken')
         
 exports.register = async (req, res)=>{
         
-    const {name, lastname, phone, adresse, email, password, role} = req.body;
+    const {name, lastname, phone, adresse, email, password} = req.body;
     try{
-        const newUser = new User ({name, lastname, phone, adresse, email, password, role});
+        const newUser = new User ({name, lastname, phone, adresse, email, password});
        
         // Hash password
        const salt = 10;
@@ -60,7 +60,8 @@ exports.login =  async (req, res)=>{
     //     créer un token
        const payload = {
          _id: searchedUser._id,
-         name:searchedUser.name
+         name:searchedUser.name,
+         role : searchedUser.role
             
        };
      const token = await jwt.sign(payload, process.env.SecretOrKey, {expiresIn: 3600});
