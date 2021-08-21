@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
  import { loginUser, registerUser } from '../Redux/Action/authAction.js';
+ import {current} from '../Redux/Action/authAction'
  
 import './sing.css';
 const Signup = () => {
@@ -15,6 +16,8 @@ const Signup = () => {
 	//const [role, setRole] = useState('searcher');
 	 const dispatch = useDispatch();
 	 const history = useHistory();
+	 const user = [email, password, role]
+	 console.log(user)
 	
 	return (
 		
@@ -37,7 +40,11 @@ const Signup = () => {
 								  <div className="center-wrap">
 									<div className="section text-center">
 									  <h4 className="mb-4 pb-3">Log In</h4>
-				
+								
+
+
+											
+										
 									  <div className="form-group">
 										<input type="email" name="logemail" className="form-style" placeholder="Your Email" id="logemail" autoComplete="off" onChange={(e) => setEmail(e.target.value)}/>
 										<i className="input-icon uil uil-at" />

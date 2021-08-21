@@ -17,6 +17,7 @@ import Phyto from './Page/phyto/phyto';
 import Beaute from './Page/beauté/beauté';
 import Maladie from './Page/maladie/maladie';
 import PageBeaute from './Page/beauté/pageBeaute';
+import PageMaladie from './Page/maladie/pageMaladies';
 
 
 
@@ -41,6 +42,7 @@ function App() {
       <PrivateRoute exact path="/dashboard" component={Dashboard}/>
 
       <Route exact path="/pageBeaute" component={PageBeaute}/>
+      <Route exact path="/pageMaladies" component={PageMaladie}/>
       {/* <main style={{minHeight:"12vh"}}></main> */}
       </Switch>
    <Footer/>

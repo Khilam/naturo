@@ -2,6 +2,10 @@ import Modal from 'react-bootstrap/Modal'
 import {useState} from 'react'
 import Button from 'react-bootstrap/Button'
 import './modal.css'
+import ModalNAv from './modalNav';
+
+
+// import '../../Shared/navbar.css'
 
 
 
@@ -43,20 +47,36 @@ function Modale ({id,el}) {
           Voir plus
         </Button>
   
-        <Modal
+        <Modal dialogClassName="my-modal"
           show={show}
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
+          
         >
-          <Modal.Header closeButton>
-          <img className="modalImage"src={el.image} alt="" />
-          </Modal.Header>
+          {/* <Modal.Header closeButton> */}
+          {/* <img className="modalImage"src={el.image} alt="" /> */}
+          {/* </Modal.Header> */}
+            <ModalNAv className="navModal"/>
           <Modal.Body>
-            
-          <h6 className="title-phyto">{el.titre}</h6>
-        <p className="parag-phyto">{el.contenu}</p>
+              
+          <div>
+         
+         <div className="parent1" >
         
+         <h6 className="title-phytoM">{el.titre}</h6>
+         <div >
+         <img  className="imageModal" src={el.image} alt="fpage1"/>
+         </div>
+         
+         <div className="Rectang">
+          
+         </div>
+     </div>
+     <div className="modal-M">
+  
+        <p className="parag-phytoModal">{el.contenu}</p>
+        </div>
         
           {/* <div className="product">
         <img src={el.image} alt="" />
@@ -67,62 +87,20 @@ function Modale ({id,el}) {
            <p className="info__description" defaultValue ={el.contenu}></p>
 </div>
 </div> */}
-
+ </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
+            <Button className="boutonModal" variant="secondary" onClick={handleClose}>
+              Retour
             </Button>
-            <Button variant="primary">Understood</Button>
-          </Modal.Footer>
+            {/* <Button variant="primary">Understood</Button> */}
+            </Modal.Footer>
+           
+        
         </Modal>
         
         </div>
     );
-  }
+}
+  
   export default Modale;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import beauté from '../../images/beauté.jpg'
-// import { useDispatch, useSelector } from 'react-redux'
-// import {useEffect} from 'react'
-// import {getDetailPaper} from '../../Redux/Action/paperAction'
-// // import './phyto.css'
-
-
-
-// const PageBeaute = ({ el, id }) => {
-//     return (
-//         <div className="product">
-//         <img src={el.image} alt="" />
-  
-//         <div className="product__info">
-//           <p className="info__name" defaultValue ={el.titre}/>
-  
-//           <p className="info__description" defaultValue ={el.contenu}/>
-  
-    
-
-//         </div>
-//       </div>
-//     );
-//   };
-
-// export default PageBeaute
-

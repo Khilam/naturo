@@ -1,4 +1,21 @@
-.modalImage{
-    width: 50px;
-    height: 50px;
+.my-modal {
+    width: 97vw ;   /* Occupy the 90% of the screen width */
+    max-width: 97vw;
+    height: 20vw;
+} 
+ .imagearpop{
+  justify-items: end;
+} 
+.navModal{
+   position: center;
+}
+.parag-phytoM{
+   color: black;
+   margin-top: 0px;
+}
+.title-phytoM{
+    margin-top: 500px;
+}
+.modal-M{
+    margin-top: -700px;
 }

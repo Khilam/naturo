@@ -2,6 +2,7 @@ import React from 'react'
 import maladies from '../../images/maladies.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
+
 //  import { useHistory } from 'react-router'
 // import { logout } from '../../Redux/Action/authAction'
 import {getAllPapers} from '../../Redux/Action/paperAction'
@@ -37,9 +38,7 @@ const Maladie = () => {
             <div className="phyto-title-parag">
         <h6 className="title-phyto">{el.titre}</h6>
         <p className="parag-phyto">{el.contenu.substring(0, 500)}...</p>
-        <button onClick={()=>{dispatch(getAllPapers());
-            paper.push('/pageIndiv')
-            }}>En savoir plus</button>
+        <a href="/pageMaladies"> en savoir plus</a>
         </div>
         <img className="img-phyto"
         src={el.image} alt="imgs"/>
