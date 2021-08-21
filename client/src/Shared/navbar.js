@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./navbar.css"
 
 function Navbar() {
-
+ 
     
 	return (
 
@@ -30,7 +30,7 @@ function Navbar() {
                         <a href="apropos" className="nav-item nav-link">À propos </a>
                         <a href="/" className="nav-item nav-link">Acceuil </a>
                         <a href="sign" className="nav-item nav-link"><BsPersonFill/></a>
-
+   
 
                      
                         <a href="#panier" className="nav-item nav-link"><FaShoppingCart/></a>

@@ -34,7 +34,9 @@ export const loginUser = (user, history) => async (dispatch) => {
 	try {
 		const result = await axios.post('app/auth/login', user); //{newUser+msg+token}
 		dispatch({ type: LOGIN_USER, payload: result.data });
-	     history.push('/dashboard');
+	    console.log(user)  
+		user && user.email =='admin@gmail.com'?
+		history.push('/dashboard'): history.push('/');
 	} catch (error) {
 		const { errors, msg } = error.response.data;
 		if (Array.isArray(errors)) {
