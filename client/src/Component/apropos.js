@@ -3,11 +3,13 @@ import './apropos.css'
 import apropos from './../images/apropos.jpg'
 import conceptnaturo from './../images/conceptsnatoro.jpg'
 import nousommes from './../images/nousommes.jpg'
+import Navbar from '../Shared/navbar'
+import Footer from '../Shared/footer'
 
 function Apropos() {
     return (
         <div>
-         
+         <Navbar/>
             <div className="parent" >
             <h1 className="fraze">À propos</h1>
   
@@ -43,6 +45,7 @@ En fonction des réponses obtenues, le naturopathe se positionnera comme un «é
         <div className="intro2">
 
 </div>
+<Footer/>
         </div>
         
     )

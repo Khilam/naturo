@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
  import { loginUser, registerUser } from '../Redux/Action/authAction.js';
- import {current} from '../Redux/Action/authAction'
+//  import {current} from '../Redux/Action/authAction'
  
 import './sing.css';
+import Navbar from '../Shared/navbar.js';
+import Footer from '../Shared/footer.js';
 const Signup = () => {
 	const [name, setName] = useState('');
 	const [lastname, setLastname] = useState('');
@@ -12,16 +14,17 @@ const Signup = () => {
 	const [adresse, setAdresse] = useState('');
     const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const [role, setRole] = useState('');
+	// const [role, setRole] = useState('');
 	//const [role, setRole] = useState('searcher');
 	 const dispatch = useDispatch();
 	 const history = useHistory();
-	 const user = [email, password, role]
+	 const user = [email, password]
 	 console.log(user)
 	
 	return (
 		
 				<div>
+					<Navbar/>
 				  <a href="#https://front.codes/" className="logo" target="_blank">
 				
 				  </a>
@@ -58,10 +61,10 @@ const Signup = () => {
 									type="submit"
 									className="btn"
 									defaultValue="Sign In"
-									onClick={() => dispatch(loginUser({ email, password, role }, history))}
+									onClick={() => dispatch(loginUser({ email, password }, history))}
 								/>
 							</div>
-									  <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Vous n'avez pas de compte...Inscrivez-vous?</a></p>
+									  <p className="mb-0 mt-4 text-center"><p>Vous n'avez pas de compte...Inscrivez-vous.</p></p>
 									</div>
 								  </div>
 								</div>
@@ -100,7 +103,7 @@ const Signup = () => {
 									className="btn"
 									defaultValue="Sign Up"
 									onClick={() =>
-										dispatch(registerUser({ name, lastname, phone, adresse, email, password, role }, history))
+										dispatch(registerUser({ name, lastname, phone, adresse, email, password}, history))
 									}
 								/>
 							</div>
@@ -114,6 +117,7 @@ const Signup = () => {
 					  </div>
 					</div>
 				  </div>
+				  <Footer/>
 				</div>
 			  );
 			}

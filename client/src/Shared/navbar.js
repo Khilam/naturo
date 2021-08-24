@@ -4,7 +4,7 @@ import { FaPagelines} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {FaShoppingCart} from 'react-icons/fa'
 import {FaSearch} from 'react-icons/fa'
-import { useDispatch, useSelector } from 'react-redux';
+
 
 import "./navbar.css"
 

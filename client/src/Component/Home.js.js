@@ -6,6 +6,8 @@ import maladies from './../images/maladies.jpg'
 import phyto from './../images/phyto.jpg'
 import boutique from './../images/boutique.jpeg'
 import treemen from './../images/treeman.jpg'
+import Navbar from '../Shared/navbar'
+import Footer from '../Shared/footer'
 // import {FaPhone} from 'react-icons/fa'
 // import {ImHome} from 'react-icons/im'
 // import {IoIosMail} from 'react-icons/io'
@@ -17,7 +19,7 @@ import treemen from './../images/treeman.jpg'
 function Home() {
     return (
         <div>
-         
+         <Navbar/>
             <div className="parent" >
             <h1 className="fraze">LE CHEMAIN VERS UNE VIE EPANOUIE</h1>
   
@@ -112,7 +114,7 @@ Le but de ces consultations est de vous apporter une réponse globale à vos pro
 
 
 
-
+<Footer/>
 </div>
 
   

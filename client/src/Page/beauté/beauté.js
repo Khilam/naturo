@@ -3,20 +3,23 @@ import beauté from '../../images/beauté.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
 
-import {getAllPapers} from '../../Redux/Action/paperAction'
 
 import Modale from './pageBeaute'
+import Footer from '../../Shared/footer'
+import Navbar from '../../Shared/navbar'
+import { getPaperAPI } from '../../Redux/Action/paperAction'
 // import './phyto.css'
 const Beaute = () => {
     const dispatch=useDispatch();
   
     const paper = useSelector((state)=>state.paper.datas);
-    useEffect (()=>{
-        dispatch(getAllPapers())
-    })
+    useEffect(() => {
+        dispatch(getPaperAPI())
+           }, [dispatch])
+           console.log("my data",paper)
     return (
         <div>
-         
+         <Navbar/>
             <div className="parent1" >
             <h1 className="fraze">Beauté</h1>
   
@@ -52,7 +55,7 @@ const Beaute = () => {
 }
 </div>
 
-            
+<Footer/> 
         </div>
     )
 }
