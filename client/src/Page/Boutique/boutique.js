@@ -51,17 +51,18 @@ const Boutique = ({boutique}) => {
         {/* <h6 className="title">{el.title} </h6> */}
       
         <h6 className="title">Prix: {el.price} DT</h6>
-       
-        
-        
-        
-        </div>
-       
-        </div>
         <Rating 
-            value={product.rating}
+            rating={el.rating}
             
           />
+       
+        
+        
+        
+        </div>
+       
+        </div>
+      
 
      
         </div> 
