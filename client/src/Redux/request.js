@@ -53,3 +53,8 @@ function updatePapers(id) {
 
   export {addNewPaper, getAllPapers, deletePapers,updatePapers} 
   export default {addNewPaper,getAllPapers, deletePapers,updatePapers}
+  
+
+  /***************************************PRODUCTS ************************************ *****/
+
+  

@@ -8,7 +8,7 @@ module.exports = {
         addProduct:async (req, res)=>{
             
                
-           const {title, description, imageUrl, conseils, price}=req.body
+           const {title, description, imageUrl, conseils, price, rating}=req.body
     
            try{
                product= new Product({
@@ -16,7 +16,7 @@ module.exports = {
                 description,
                  imageUrl, 
                  conseils,
-                price
+                price, rating
                })
                await product.save()
                res.json(product)

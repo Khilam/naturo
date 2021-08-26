@@ -1,7 +1,7 @@
 /****************** NATUROPATHIE *****************/
 
 
-.title{
+.bigTitle{
 
     margin-top: 5px;
     font-family: Red Rose;
@@ -136,4 +136,45 @@
         margin-left: 20px;
         margin-right: 20px;
     }
+    /***********************************************Boutique *********************************/
+    .boutik{
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: -700px;
     
+    }
+    .modal-B{
+      width: 550px;
+      margin-left: 70px;
+  
+    }
+    
+    .parag-boutikModal{
+      font-family:cursive;
+      font-size: larger;
+      color: black;
+    }
+    .text-dexcrip{
+      color: rgb(75, 189, 75);
+      font-family: monospace;
+    }
+    .box-boutik{
+      background-color: #328B70;
+      opacity: 75%;
+      width: 400px;
+   
+      margin-right: 10px;
+      margin-left: 80px;
+    
+    }
+    .title{
+      color: black;
+      text-underline-offset: none;
+    }
+    .prix-modalBoutik{
+      text-align: center;
+      color: black;
+      font-family:'Courier New', Courier, monospace;
+      font-size: large;
+      font-weight: bold;
+    }

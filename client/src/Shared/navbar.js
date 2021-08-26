@@ -15,7 +15,7 @@ function Navbar() {
 
   
         <div >
- <h1 className="title" href="#home" >
+ <h1 className="bigTitle" href="#home" >
       <FaPagelines/> NATUROPATHIE </h1> 
       <div className="navbar navbar-expand-lg ">
             <div className="container-fluid">
@@ -26,7 +26,7 @@ function Navbar() {
                         <a href="Phyto" className="nav-item nav-link active phyto">Phytothérapie</a>
                         <a href="Maladies" className="nav-item nav-link">Maladies</a>
                         <a href="Beauté" className="nav-item nav-link">Beauté</a>
-                        <a href="#Boutique" className="nav-item nav-link">Boutique</a>
+                        <a href="Boutique" className="nav-item nav-link">Boutique</a>
                         <a href="apropos" className="nav-item nav-link">À propos </a>
                         <a href="/" className="nav-item nav-link">Acceuil </a>
                         <a href="sign" className="nav-item nav-link"><BsPersonFill/></a>

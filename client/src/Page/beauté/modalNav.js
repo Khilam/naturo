@@ -15,7 +15,7 @@ function ModalNAv() {
 
   
         <div >
- <h1 className="title" href="#home" >
+ <h1 className="bigTitle" href="#home" >
       <FaPagelines/> NATUROPATHIE </h1> 
       <div className="navbar navbar-expand-lg ">
             <div className="container-fluid">

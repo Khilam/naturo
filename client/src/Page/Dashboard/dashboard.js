@@ -9,6 +9,7 @@ import { FaPagelines} from 'react-icons/fa';
 import ListIcon from '@material-ui/icons/List';
 import './dashboard.css'
 import PapresDashboard from './papersDashboard/papersDashboard'
+import ProductsDashboard from './product/productDashboard'
 
 
 
@@ -68,10 +69,11 @@ const Dashboard = () => {
         <PapresDashboard/>
         </Tab.Pane>
         <Tab.Pane eventKey="second">
-          {/* <Sonnet /> */}
+        {/* <Sonnet /> */}
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
-          {/* <Sonnet /> */}
+         
+          <ProductsDashboard/>
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
         {/* <button

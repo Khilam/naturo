@@ -16,6 +16,9 @@ import Beaute from './Page/beauté/beauté';
 import Maladie from './Page/maladie/maladie';
 import PageBeaute from './Page/beauté/pageBeaute';
 import PageMaladie from './Page/maladie/pageMaladies';
+// import Products from './Page/Boutique/boutique';
+import PageBoutique from './Page/Boutique/pageBoutique';
+import Boutique from './Page/Boutique/boutique';
 
 
 
@@ -33,6 +36,7 @@ function App() {
      <Route path="/phyto" component={Phyto}/>
      <Route path="/beauté" component={Beaute}/>
      <Route path="/maladies" component={Maladie}/>
+     <Route path="/boutique" component={Boutique}/>
     
       <Route path="/apropos" component={Apropos}/>
       <Route path="/sign" component={Signup}/>
@@ -40,7 +44,9 @@ function App() {
       <PrivateRoute exact path="/dashboard" component={Dashboard}/>
 
       <Route exact path="/pageBeaute" component={PageBeaute}/>
+      
       <Route exact path="/pageMaladies" component={PageMaladie}/>
+      <Route exact path="/pageBoutique" component={PageBoutique}/>
       
       </Switch>
   
