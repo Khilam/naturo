@@ -178,3 +178,10 @@
       font-size: large;
       font-weight: bold;
     }
+
+
+    @media (max-width: 550px) {
+      .media {
+        width: 46%;
+      }
+    }

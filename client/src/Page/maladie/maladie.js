@@ -3,6 +3,7 @@ import maladies from '../../images/maladies.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
 import Modale from './pageMaladie'
+import '../../Page/phyto/phyto.css'
 
 //  import { useHistory } from 'react-router'
 // import { logout } from '../../Redux/Action/authAction'

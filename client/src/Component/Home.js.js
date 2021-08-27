@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Shared/navbar.css"
-import fotopage1 from './../images/fotopage1.png'
+import acceuil from './../images/acceuil.jpg'
 import beauté from './../images/beauté.jpg'
 import maladies from './../images/maladies.jpg'
 import phyto from './../images/phyto.jpg'
@@ -24,7 +24,7 @@ function Home() {
             <h1 className="fraze">LE CHEMAIN VERS UNE VIE EPANOUIE</h1>
   
             <div >
-            <img  className="image1" src={fotopage1} alt="fpage1"/>
+            <img  className="image1" src={acceuil} alt="fpage1"/>
             </div>
             <div className="rectangle">
              

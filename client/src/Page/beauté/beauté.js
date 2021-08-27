@@ -2,6 +2,7 @@ import React from 'react'
 import beauté from '../../images/beauté.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
+import '../phyto/phyto.css'
 
 
 import Modale from './pageBeaute'

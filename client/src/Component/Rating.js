@@ -1,11 +1,12 @@
 import React from 'react'
 
+
 const Rating = ({ rating }) => {
-  // const { rating } = props
+  
   return (
-    <div className="rating">
-      <span>
-        <i
+    <div  className="ratings">
+      <span className="rating">
+        <i 
           className={
             rating >= 1
               ? 'fas fa-star'

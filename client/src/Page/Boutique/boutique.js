@@ -1,6 +1,6 @@
 
 import React from 'react'
-import boutiqueImg from '../../images/boutiqueImg.jpg'
+import  boutikPrincipal from '../../images/boutikPrincipal.jpg'
 import { useDispatch, useSelector } from 'react-redux'
 import {useEffect} from 'react'
 import Navbar from '../../Shared/navbar'
@@ -10,6 +10,12 @@ import './boutique.css'
 import Modale from './pageBoutique'
 import Rating from '../../Component/Rating'
 
+// Redux
+import { connect } from "react-redux";
+import {
+  loadCurrentItem,
+  addToCart,
+} from '../../Redux/Action/cartAction';
 
 const Boutique = ({boutique}) => {
  
@@ -26,7 +32,7 @@ const Boutique = ({boutique}) => {
             <h1 className="fraze">Boutique</h1>
   
             <div >
-            <img  className="imagearpop" src={boutiqueImg} alt="fpage1"/>
+            <img  className="imagearpop" src={boutikPrincipal} alt="fpage1"/>
             </div>
             
             <div className="Rectang">
@@ -51,12 +57,17 @@ const Boutique = ({boutique}) => {
         {/* <h6 className="title">{el.title} </h6> */}
       
         <h6 className="title">Prix: {el.price} DT</h6>
-        <Rating 
+        <Rating className="Rating-boutik"
             rating={el.rating}
             
           />
        
-        
+       <button
+          onClick={() => addToCart(product.id)}
+        //   className={`${styles.buttons__btn} ${styles.buttons__add}`}
+        >
+          Add To Cart
+        </button>
         
         
         </div>
@@ -77,4 +88,11 @@ const Boutique = ({boutique}) => {
      )
      }
 
-export default Boutique
+     const mapDispatchToProps = (dispatch) => {
+        return {
+          addToCart: (id) => dispatch(addToCart(id)),
+          loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+        };
+      };
+      
+      export default connect(null, mapDispatchToProps)(Boutique);

@@ -19,3 +19,12 @@
 .modal-M{
     margin-top: -700px;
 }
+.prix-modalBoutik{
+    margin-top: 10px;
+}
+
+@media (max-width: 550px) {
+    .media {
+      width: 46%;
+    }
+  }

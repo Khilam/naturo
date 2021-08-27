@@ -53,3 +53,30 @@
 /*************************************image ************************************/
 
 
+@media (max-width: 550px) {
+    .card-phyto {
+      width: 46%;
+      margin-left: 10px;
+    }
+    .imagearpop{
+        width: 46%;
+        margin-left: 5px;
+    }
+    .Rectang{
+        width: 100%;
+       align-items: center;
+    }
+    .img-phyto{
+        width: 36%;
+
+    }
+    /* .card-phyto{
+
+    }
+    .title-phyto{
+
+    }
+    .parag-phyto{
+
+    } */
+  }

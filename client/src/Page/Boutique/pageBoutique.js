@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Button from 'react-bootstrap/Button'
 import '../beauté/modal.css'
 import ModalNAv from '../beauté/modalNav';
+import Rating from '../../Component/Rating';
 
 
 
@@ -21,7 +22,7 @@ function Modale ({id,el}) {
       <div>
           
         <a href className="title" variant="primary" onClick={handleShow}>
-        {el.title}
+        {el.title.substring(0, 20)}...
        
         </a>
   
@@ -50,21 +51,32 @@ function Modale ({id,el}) {
           
          </div>
      </div>
+     
      <div className="boutik">
+     
      <div className="modal-B">
+    
   
         <h3 className="text-dexcrip">Description:</h3>
         <p className="parag-boutikModal">{el.description}</p>
         <h4 className="text-dexcrip">Conseils d'utilisation:</h4>
         <p className="parag-boutikModal">{el.conseils}</p>
         </div>
+       
         <div className="box-boutik">
+       
         <p className="prix-modalBoutik"> Prix: {el.price} DT</p>
+        <div className="Rating-modal"> <Rating class="ratingss"
+            rating={el.rating}
+            
+          />
+          </div>
         </div>
         </div>
         
         
  </div>
+
           </Modal.Body>
           <Modal.Footer>
             <Button className="boutonModal" variant="secondary" onClick={handleClose}>

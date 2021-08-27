@@ -302,3 +302,9 @@ h6 span{
 	width: auto;
 	display: block;
 }
+
+@media (max-width: 550px) {
+  .media {
+    width: 46%;
+  }
+}
