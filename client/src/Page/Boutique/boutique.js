@@ -16,6 +16,7 @@ import Rating from '../../Component/Rating'
 
 // Redux
 import { connect } from "react-redux";
+import { propTypes } from 'react-bootstrap/esm/Image'
 // import {
 //   loadCurrentItem,
 //   addToCart,
@@ -26,18 +27,32 @@ import { connect } from "react-redux";
 
 
 
-const Boutique = ({ boutique, history}) => {
+const Boutique = ({ boutique}) => {
     const [qanty, setQanty] = useState(1)
     const dispatch = useDispatch()
     const product = useSelector((state) => state.product.datas)
-    useEffect(() => {
-      dispatch(getProductAPI())
-    }, [dispatch])
+    
+//     useEffect(() => {
+//       dispatch(getProductAPI())
+//     }, [dispatch])
    
-    console.log('my data', product)
-    const addToCartHandler = () => {
-        history.push(`/cart/${product.params._id}?qanty=${CountQueuingStrategy}`);
-      };
+//     console.log('my data', product)
+//     dispatch(detailsProduct(productId));
+// }, [dispatch, productId]);
+//     const addToCartHandler = () => {
+//         props.history.push(`/cart/${productId}?qty=${qty}`);
+     // };
+/**** */
+
+
+useEffect(() => {
+    
+        dispatch(getProductAPI())
+    }, []);
+     
+  const addToCartHandler = () => {
+   
+  };
 
     return (
         <div>
@@ -77,8 +92,7 @@ const Boutique = ({ boutique, history}) => {
           />
        
        <button
-      onClick={addToCartHandler}
-                 // onClick={() => dispatch(addToCart(el._id, qanty))}
+       onClick={() => dispatch(addToCartHandler(el.title, qanty))}
                   
 
                 
