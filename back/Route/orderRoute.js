@@ -1,11 +1,15 @@
-// const express = require ('express')
-// const router = express.Router()
-// const product = require ('../Controller/productController')
+const express=require ("express")
+const router=express.Router()
+const order=require("../Controller/orderController")
+const  protect  = require ( '../Controller/authController')
 
-// router.route('/').post(protect, addOrderItems).get(protect, admin, getOrders)
-// router.route('/myorders').get(protect, getMyOrders)
-// router.route('/:id').get(protect, getOrderById)
-// // router.route('/:id/pay').put(protect, updateOrderToPaid)
-// // router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered)
+const  admin  = require ( '../Controller/authController')
+const {getMyOrders, addOrderItems, getOrderById, getOrders} = require ('../Controller/orderController')
 
-// module.exports = router
+router.post('/add', order.addOrderItems, order.getOrders) //admin
+router.get('/myorders', order.getMyOrders)
+router.get('/:id', getOrderById)
+// router.route('/:id/pay').put(protect, updateOrderToPaid)
+// router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered)
+
+module.exports=router  

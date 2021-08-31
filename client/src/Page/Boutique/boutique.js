@@ -1,7 +1,8 @@
 
 import React from 'react'
 import  boutikPrincipal from '../../images/boutikPrincipal.jpg'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector} from 'react-redux'
+import  { useState } from 'react'
 import {useEffect} from 'react'
 import Navbar from '../../Shared/navbar'
 import Footer from '../../Shared/footer'
@@ -10,21 +11,34 @@ import './boutique.css'
 import Modale from './pageBoutique'
 import Rating from '../../Component/Rating'
 
+
+
+
 // Redux
 import { connect } from "react-redux";
-import {
-  loadCurrentItem,
-  addToCart,
-} from '../../Redux/Action/cartAction';
+// import {
+//   loadCurrentItem,
+//   addToCart,
+// } from '../../Redux/Action/orderAction';
 
-const Boutique = ({boutique}) => {
- 
-    const dispatch=useDispatch();
-    const product = useSelector((state)=>state.product.datas);
+
+
+
+
+
+const Boutique = ({ boutique, history}) => {
+    const [qanty, setQanty] = useState(1)
+    const dispatch = useDispatch()
+    const product = useSelector((state) => state.product.datas)
     useEffect(() => {
-        dispatch(getProductAPI())
-           }, [dispatch])
-           console.log("my data",product)
+      dispatch(getProductAPI())
+    }, [dispatch])
+   
+    console.log('my data', product)
+    const addToCartHandler = () => {
+        history.push(`/cart/${product.params._id}?qanty=${CountQueuingStrategy}`);
+      };
+
     return (
         <div>
          <Navbar/>
@@ -63,11 +77,16 @@ const Boutique = ({boutique}) => {
           />
        
        <button
-          onClick={() => addToCart(product.id)}
-        //   className={`${styles.buttons__btn} ${styles.buttons__add}`}
-        >
-          Add To Cart
-        </button>
+      onClick={addToCartHandler}
+                 // onClick={() => dispatch(addToCart(el._id, qanty))}
+                  
+
+                
+                >
+                   
+                  Add To Cart
+                 
+                </button>
         
         
         </div>
@@ -88,11 +107,4 @@ const Boutique = ({boutique}) => {
      )
      }
 
-     const mapDispatchToProps = (dispatch) => {
-        return {
-          addToCart: (id) => dispatch(addToCart(id)),
-          loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
-        };
-      };
-      
-      export default connect(null, mapDispatchToProps)(Boutique);
+     export default Boutique

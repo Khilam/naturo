@@ -20,7 +20,7 @@ import PageMaladie from './Page/maladie/pageMaladies';
 import PageBoutique from './Page/Boutique/pageBoutique';
 import Boutique from './Page/Boutique/boutique';
 
-
+import Panier from './Page/Cart/cart'
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
       
       <Route exact path="/pageMaladies" component={PageMaladie}/>
       <Route exact path="/pageBoutique" component={PageBoutique}/>
-      
+      <Route path="/panier" component={Panier} />
       </Switch>
   
     </div>

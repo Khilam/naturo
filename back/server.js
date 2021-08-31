@@ -28,8 +28,8 @@ const paperRouter = require('./Route/paperRoute')
 app.use('/app/paper', paperRouter) 
 
 //Order Route
-// const orderRouter = require('./Route/orderRoute')
-// app.use('/app/orders', orderRouter)
+const orderRouter = require('./Route/orderRoute')
+ app.use('/app/order', orderRouter)
 
 
 // Connect to DB
