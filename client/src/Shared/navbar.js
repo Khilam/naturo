@@ -4,7 +4,7 @@ import { FaPagelines} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {FaShoppingCart} from 'react-icons/fa'
 import {FaSearch} from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -48,7 +48,11 @@ function Navbar() {
                         <div className="icons">
                       
                         <a href="sign" className="nav-item nav-link"><BsPersonFill/></a>
-                        <a href="/panier" className="nav-item nav-link"><FaShoppingCart/></a>
+                        <Link to="/panier">
+                <a className="nav-item nav-link">
+                  <FaShoppingCart />
+                </a>
+              </Link>
                         <a href="#search" className="nav-item nav-link"><FaSearch/></a>
                        </div>
                       

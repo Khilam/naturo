@@ -11,27 +11,33 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
     setInput(e.target.value)
     adjustQty(item._id, e.target.value)
   }
+  const [qty, setQty] = useState(1)
 
   return (
     <div className="cartItem">
       <img className="cartItem__image" src={item.imageUrl} alt={item.title} />
       <div className="cartItem__details">
         <p className="details__title">{item.title}</p>
-        <p className="details__desc">{item.description}</p>
+        {/* <p className="details__desc">{item.description}</p> */}
         <p className="details__price">$ {item.price}</p>
       </div>
       <div className="cartItem__actions">
         <div className="cartItem__qty">
-          <label htmlFor="qty">Qty</label>
-          <input
-            min="1"
-            type="number"
-            id="qty"
-            name="qty"
-            value={item.qanty}
-            onChange={onChangeHandler}
-          />
-        </div>
+        <div>Qty</div>
+                          
+                            <select
+                              value={qty}
+                              onChange={(e) => setQty(e.target.value)}
+                            >
+                              {[...Array(item.countInStock).keys()].map(
+                                (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                              )}
+                            </select>
+                          </div>
         <button
           onClick={() => removeFromCart(item._id)}
           className="actions__deleteItemBtn"
