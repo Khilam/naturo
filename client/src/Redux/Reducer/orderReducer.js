@@ -1,53 +1,68 @@
-import {
-  CART_ADD_ITEM,
-  CART_REMOVE_ITEM,
-  CART_SAVE_SHIPPING_ADDRESS,
-  CART_SAVE_PAYMENT_METHOD,
-  CART_CLEAR_ITEMS,
-} from '../Const/orderConst'
+import * as actionTypes from '../Const/orderConst'
+
+// const initialState = {
+//   datas: [],
+//   cart: [],
+//   currentItem: null,
+// }
 
 export const cartReducer = (
-  state = { cartItems: [], shippingAddress: {} },
-  action
+  state = { datas: [], cart: [], currentItem: null },
+  action,
 ) => {
   switch (action.type) {
-    case CART_ADD_ITEM:
+    case actionTypes.ADD_TO_CART:
+      // Great Item data from products array
+      // const item = state.products.find(
+      //   (product) => product.id === action.payload.id
+      // );
       const item = action.payload
-
-      const existItem = state.cartItems.find((x) => x.product === item.product)
-
-      if (existItem) {
+      // Check if Item is in cart already
+      const inCart = state.cart.find((x) => x._id === item._id)
+      console.log('Cart', inCart)
+      // console.log('incart', inCart)
+      if (inCart) {
         return {
           ...state,
-          cartItems: state.cartItems.map((x) =>
-            x.product === existItem.product ? item : x
+          cart: state.cart.map((x) =>
+            x._id === action.payload._id ? item : x,
           ),
         }
       } else {
         return {
           ...state,
-          cartItems: [...state.cartItems, item],
+          cart: [...state.cart, item],
         }
       }
-    case CART_REMOVE_ITEM:
+
+    // return {
+    //   ...state,
+    //   cart: inCart
+    //     ?{...state,cart: state.cart.map((item) =>
+    //         item.id === action.payload.id)}
+    //           ? { ...item, qty: item.qty + 1 }
+    //           : item,
+
+    //     : [...state.cart, { ...item, qty: 1 }],
+    // }
+    case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,
-        cartItems: state.cartItems.filter((x) => x.product !== action.payload),
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       }
-    case CART_SAVE_SHIPPING_ADDRESS:
+    case actionTypes.ADJUST_ITEM_QTY:
       return {
         ...state,
-        shippingAddress: action.payload,
+        cart: state.cart.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, qty: +action.payload.qty }
+            : item,
+        ),
       }
-    case CART_SAVE_PAYMENT_METHOD:
+    case actionTypes.LOAD_CURRENT_ITEM:
       return {
         ...state,
-        paymentMethod: action.payload,
-      }
-    case CART_CLEAR_ITEMS:
-      return {
-        ...state,
-        cartItems: [],
+        currentItem: action.payload,
       }
     default:
       return state

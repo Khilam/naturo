@@ -1,52 +1,57 @@
-import axios from 'axios'
 import {
-  CART_ADD_ITEM,
-  CART_REMOVE_ITEM,
-  CART_SAVE_SHIPPING_ADDRESS,
-  CART_SAVE_PAYMENT_METHOD,
+  ADD_TO_CART,
+  ADD_TO_CART_FAIL,
+  ADJUST_ITEM_QTY,
+  REMOVE_FROM_CART,
+  LOAD_CURRENT_ITEM,
 } from '../Const/orderConst'
+import axios from 'axios'
 
-export const addToCart = (_id, qty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/add/${_id}`)
+export const addToCart = (id, qanty) => async (dispatch) => {
+  const { data } = await axios.get(`http://localhost:4005/app/product/${id}`)
+  // console.log(data)
+  try {
+    dispatch({
+      type: ADD_TO_CART,
+      payload: {
+        description: data.description,
+        imageUrl: data.imageUrl,
+        price: data.price,
+        rating: data.rating,
+        title: data.title,
+        _id: data._id,
+        qanty: qanty,
+      },
+    })
+  } catch (error) {
+    dispatch({
+      type: ADD_TO_CART_FAIL,
+      payload: { error: error },
+    })
+  }
+}
 
-  dispatch({
-    type: CART_ADD_ITEM,
+export const removeFromCart = (itemID) => {
+  return {
+    type: REMOVE_FROM_CART,
     payload: {
-      product: data._id,
-      name: data.name,
-      image: data.image,
-      price: data.price,
-      // countInStock: data.countInStock,
+      id: itemID,
+    },
+  }
+}
+
+export const adjustItemQty = (itemID, qty) => {
+  return {
+    type: ADJUST_ITEM_QTY,
+    payload: {
+      id: itemID,
       qty,
     },
-  })
-
-  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+  }
 }
-
-export const removeFromCart = (id) => (dispatch, getState) => {
-  dispatch({
-    type: CART_REMOVE_ITEM,
-    payload: id,
-  })
-
-  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
-}
-
-export const saveShippingAddress = (data) => (dispatch) => {
-  dispatch({
-    type: CART_SAVE_SHIPPING_ADDRESS,
-    payload: data,
-  })
-
-  localStorage.setItem('shippingAddress', JSON.stringify(data))
-}
-
-export const savePaymentMethod = (data) => (dispatch) => {
-  dispatch({
-    type: CART_SAVE_PAYMENT_METHOD,
-    payload: data,
-  })
-
-  localStorage.setItem('paymentMethod', JSON.stringify(data))
+export const loadCurrentItem = (item) => {
+  return {
+    type: LOAD_CURRENT_ITEM,
+    payload: item,
+  }
 }

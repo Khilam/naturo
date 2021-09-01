@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import styles from './CartItem.module.css'
 
 import { connect } from 'react-redux'
-import {  removeFromCart } from '../../../Redux/Action/orderAction'
+import { adjustItemQty, removeFromCart } from '../../../Redux/Action/orderAction'
 
 const CartItem = ({ item, adjustQty, removeFromCart }) => {
   const [input, setInput] = useState(item.qty)
@@ -14,10 +14,10 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
 
   return (
     <div className="cartItem">
-      <img className="cartItem__image" src={item.img} alt={item.title} />
+      <img className="cartItem__image" src={item.imageUrl} alt={item.title} />
       <div className="cartItem__details">
-        <p className="details__title">{item.name}</p>
-        <p className="details__desc">{item.qty}</p>
+        <p className="details__title">{item.title}</p>
+        <p className="details__desc">{item.description}</p>
         <p className="details__price">$ {item.price}</p>
       </div>
       <div className="cartItem__actions">
@@ -28,7 +28,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
             type="number"
             id="qty"
             name="qty"
-            value={item.qty}
+            value={item.qanty}
             onChange={onChangeHandler}
           />
         </div>
@@ -48,7 +48,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
+    adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
     removeFromCart: (id) => dispatch(removeFromCart(id)),
   }
 }

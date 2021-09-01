@@ -1,124 +1,91 @@
-
-import React from 'react'
-import  boutikPrincipal from '../../images/boutikPrincipal.jpg'
-import { useDispatch, useSelector} from 'react-redux'
-import  { useState } from 'react'
-import {useEffect} from 'react'
+import React, { useState } from 'react'
+import boutikPrincipal from '../../images/boutikPrincipal.jpg'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
 import Navbar from '../../Shared/navbar'
 import Footer from '../../Shared/footer'
+import { Col, Form} from 'react-bootstrap'
 import { getProductAPI } from '../../Redux/Action/productAction'
 import './boutique.css'
 import Modale from './pageBoutique'
 import Rating from '../../Component/Rating'
 
-
-
-
 // Redux
-import { connect } from "react-redux";
-import { propTypes } from 'react-bootstrap/esm/Image'
-// import {
-//   loadCurrentItem,
-//   addToCart,
-// } from '../../Redux/Action/orderAction';
+import { connect } from 'react-redux'
+import { loadCurrentItem, addToCart } from '../../Redux/Action/orderAction'
 
+const Boutique = ({ boutique }) => {
+  const [qanty, setQanty] = useState(1)
+  const dispatch = useDispatch()
+  const product = useSelector((state) => state.product.datas)
+  useEffect(() => {
+    dispatch(getProductAPI())
+  }, [dispatch])
+  console.log('my data', product)
+  return (
+    <div>
+      <Navbar />
+      <div className="parent1">
+        <h1 className="fraze">Boutique</h1>
 
-
-
-
-
-const Boutique = ({ boutique}) => {
-    const [qanty, setQanty] = useState(1)
-    const dispatch = useDispatch()
-    const product = useSelector((state) => state.product.datas)
-    
-//     useEffect(() => {
-//       dispatch(getProductAPI())
-//     }, [dispatch])
-   
-//     console.log('my data', product)
-//     dispatch(detailsProduct(productId));
-// }, [dispatch, productId]);
-//     const addToCartHandler = () => {
-//         props.history.push(`/cart/${productId}?qty=${qty}`);
-     // };
-/**** */
-
-
-useEffect(() => {
-    
-        dispatch(getProductAPI())
-    }, []);
-     
-  const addToCartHandler = () => {
-   
-  };
-
-    return (
         <div>
-         <Navbar/>
-            <div className="parent1" >
-            <h1 className="fraze">Boutique</h1>
-  
-            <div >
-            <img  className="imagearpop" src={boutikPrincipal} alt="fpage1"/>
-            </div>
-            
-            <div className="Rectang">
-             
-            </div>
+          <img className="imagearpop" src={boutikPrincipal} alt="fpage1" />
         </div>
-        <div className="espace"/>
-        <div className="trending">
-{
-    product
-    .map((el, key)=>(
-        <div  key={key}>
 
-        <div className="media">
-      
-        
-        <img className="poster"
-        src={el.imageUrl} alt=""/>
-       
-            <div className="phyto-title-parag">
-            <Modale   id={el._id} el={el} />
-        {/* <h6 className="title">{el.title} </h6> */}
-      
-        <h6 className="title">Prix: {el.price} DT</h6>
-        <Rating className="Rating-boutik"
-            rating={el.rating}
-            
-          />
-       
-       <button
-       onClick={() => dispatch(addToCartHandler(el.title, qanty))}
-                  
+        <div className="Rectang"></div>
+      </div>
+      <div className="espace" />
+      <div className="trending">
+        {product.map((el, key) => (
+          <div key={key}>
+            <div className="media">
+              <img className="poster" src={el.imageUrl} alt="" />
 
-                
+              <div className="phyto-title-parag">
+                <Modale id={el._id} el={el} />
+                {/* <h6 className="title">{el.title} </h6> */}
+
+                <h6 className="title">Prix: {el.price} DT</h6>
+                <Rating className="Rating-boutik" rating={el.rating} />
+                {/* <ListGroup.Item>
+                  <Row> */}
+                {/* <Col>Qty</Col>
+                <Col>
+                  <Form.Control
+                    as="select"
+                    value={qanty}
+                    onChange={(e) => setQanty(e.target.value)}
+                  >
+                    {[...Array(el.qty).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </Form.Control>
+                </Col> */}
+                {/* </Row>
+                </ListGroup.Item> */}
+                <button
+                  onClick={() => dispatch(addToCart(el._id, qanty))}
+                  //   className={`${styles.buttons__btn} ${styles.buttons__add}`}
                 >
-                   
                   Add To Cart
-                 
                 </button>
-        
-        
-        </div>
-       
-        </div>
-      
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Footer />
+    </div>
+  )
+}
 
-     
-        </div> 
-    )
-     ) 
-     
-        }
-        </div>
-         <Footer/>
-     </div> 
-          
-     )
-     }
+const mapDispatchToProps = (dispatch) => {
+  return {
+     addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  }
+}
 
-     export default Boutique
+export default connect(null, mapDispatchToProps)(Boutique)
