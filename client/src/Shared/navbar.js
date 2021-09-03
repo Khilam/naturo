@@ -3,8 +3,9 @@ import React from 'react'
 import { FaPagelines} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {FaShoppingCart} from 'react-icons/fa'
-import {FaSearch} from 'react-icons/fa'
+
 import { Link } from 'react-router-dom'
+import './searchanimate.css'
 
 
 
@@ -24,18 +25,18 @@ function Navbar() {
 
  <h1 className="bigTitle" href="#home" >
       <FaPagelines/> NATUROPATHIE </h1> 
-      <div className="navbar navbar-expand-lg ">
+      <div className="navbar navbar-expand ">
             <div className="container-fluid">
                 
   
                     
-                <div className="navbarr" id="navbar Collapse">
+                <div className="navbarr" >
                 
 
                    
                    
                
-                    < div className="navbar-nav  ">
+                    < div className="navbar-nav">
                         <Link to="Phyto" className="nav-item nav-link active phyto">Phytothérapie</Link>
                         <Link to="Maladies" className="nav-item nav-link">Maladies</Link>
                         <Link to="Beauté" className="nav-item nav-link">Beauté</Link>
@@ -53,7 +54,17 @@ function Navbar() {
                   <FaShoppingCart />
                 </a>
               </Link>
-                        <a href="#search" className="nav-item nav-link"><FaSearch/></a>
+
+              
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+        <div className="search-container">
+          <input type="text" name="search" placeholder="Search..." className="search-input" />
+          <a href="search" className="search-btn">
+            <i className="fas fa-search" />      
+          </a>
+        </div>
+                        {/* <Link to="searchAnimate" className="nav-item nav-link"><FaSearch/></Link> */}
                        </div>
                       
                        
@@ -75,7 +86,8 @@ function Navbar() {
   
 </div>
 
-
+  
+       
  )
 }
 

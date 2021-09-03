@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import {current} from './Redux/Action/authAction'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route } from 'react-router';
-import Home from './Component/Home.js';
+import Home from './Component/Home';
 import Apropos from './Component/apropos';
 import Signup from './Component/singn';
 import Dashboard from './Page/Dashboard/dashboard';
@@ -43,6 +43,13 @@ function App() {
     
       <Route path="/apropos" component={Apropos}/>
       <Route path="/sign" component={Signup}/>
+      <Route path="/search/:keyword" component={Home} exact />
+          {/* <Route path="/page/:pageNumber" component={HomeScreen} exact /> */}
+          <Route
+            path="/search/:keyword/page/:pageNumber"
+            component={Home}
+            exact
+          />
      
       <PrivateRoute exact path="/dashboard" component={Dashboard}/>
 

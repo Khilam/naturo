@@ -8,15 +8,28 @@ import boutique from './../images/boutique.jpeg'
 import treemen from './../images/treeman.jpg'
 import Navbar from '../Shared/navbar'
 import Footer from '../Shared/footer'
-// import {FaPhone} from 'react-icons/fa'
-// import {ImHome} from 'react-icons/im'
-// import {IoIosMail} from 'react-icons/io'
+import { useDispatch, useSelector } from 'react-redux'
+import  { useEffect } from 'react'
+import { getPaperAPI } from '../Redux/Action/paperAction'
 
 
 
 
 
-function Home() {
+
+function Home({ match }) {
+    const keyword = match.params.keyword
+    const dispatch = useDispatch()
+
+    const productList = useSelector((state) => state.getPaperAPI)
+    const { titre, title, catégorie} = getPaperAPI
+
+    useEffect(() => {
+        dispatch(getPaperAPI(keyword))
+      }, [dispatch, keyword])
+
+console.log('keyword', keyword)
+      
     return (
         <div>
          <Navbar/>
