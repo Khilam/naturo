@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import Navbar from '../../Shared/navbar'
 import Footer from '../../Shared/footer'
-import { Col, Form} from 'react-bootstrap'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import { getProductAPI } from '../../Redux/Action/productAction'
 import './boutique.css'
 import Modale from './pageBoutique'
@@ -65,12 +65,12 @@ const Boutique = ({ boutique }) => {
                 </Col> */}
                 {/* </Row>
                 </ListGroup.Item> */}
-                <button
+                <AddShoppingCartIcon className="iconPanier"
                   onClick={() => dispatch(addToCart(el._id, qanty))}
                   //   className={`${styles.buttons__btn} ${styles.buttons__add}`}
                 >
                   Add To Cart
-                </button>
+                </AddShoppingCartIcon>
               </div>
             </div>
           </div>

@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react'
 
 import { connect, useSelector } from 'react-redux'
 import Navbar from '../../Shared/navbar'
-import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore';
+import RemoveIcon from '@material-ui/icons/Remove';
 import DeleteIcon from '@material-ui/icons/Delete';
-import {Table, Button} from 'react-bootstrap'
+import AddIcon from '@material-ui/icons/Add';
+import {Button} from 'react-bootstrap'
 import './panier.css'
 
 const Cart = () => {
@@ -36,13 +37,14 @@ const Cart = () => {
   <h2>Votre panier</h2>
   <ul class="responsive-table">
     <li class="table-header">
-      <div class="col col-3">Produit</div>
+      <div class="col col-1">Produit</div>
       <div class="col col-1">Prix</div>
       <div class="col col-3">Image</div>
-      <div class="col col-1">Quantité</div>
-      <div class="col col-2">Somme</div>
-      <div class="col col-2"></div>
+      <div class="col col-4">Quantité</div>
+      <div class="col col-1">Somme</div>
+      <div class="col col-1"></div>
     </li>
+    
    
 <tbody className="panier">
 
@@ -50,17 +52,18 @@ const Cart = () => {
 {cart.map((item) => (
                 <tr key={item._id}>
                   {/* <td className="paper-dash">{product._id}</td> */}
+                  <div className="table-row">
                   <td className="col col-2">{item.title}</td>
                
                 
-                  <td className="col col-2">{item.price}</td>
-                  <td> <img className="col col-2" src={item.imageUrl} alt=""/></td>
+                  <td className="col col-1">{item.price}</td>
+                  <td> <img className="col col-3" src={item.imageUrl} alt=""/></td>
                
-                  <td className="col col-1"> {item.somme} <UnfoldMoreIcon /> </td>
+                  <td className="col col-4">  <AddIcon /> {item.qty}<RemoveIcon/> </td>
                   
-                  <td className="col col-2"> {item.somme} </td>
-                  <td><Button> 
-                    < DeleteIcon />
+                  <td className="col col-1"> {item.somme} </td>
+                  <td className="col col-1"><Button className="col col-1"> 
+                    < DeleteIcon className="deletoneitem"/>
                      
                     </Button> 
                     </td>
@@ -70,22 +73,26 @@ const Cart = () => {
                       
                    
                   </td>
+                  </div>
                 </tr>
+                
               ))}
+              
             </tbody>
+           
           </ul>
           <h3 className="total">Total: {totalItems.price}</h3>
-          <Button >
+          <Button className="boutonpanier">
                      Valider
                       
                       </Button>
-                      <Button >
+                      <Button className="boutonpanier">
                    Annuler
                       
                       </Button>
-          </div>
-          </div>
          
+          </div>
+          </div>
     )
 }
 

@@ -20,6 +20,8 @@ import PageMaladie from './Page/maladie/pageMaladies';
 import PageBoutique from './Page/Boutique/pageBoutique';
 import Boutique from './Page/Boutique/boutique';
 import Cart from './Page/Cart/panier'
+import ShippingScreen from './Page/Cart/shippingScreen';
+import PaymentScreen from './Page/PaymentScreen';
 
 
 
@@ -48,6 +50,8 @@ function App() {
       <Route exact path="/pageMaladies" component={PageMaladie}/>
       <Route exact path="/pageBoutique" component={PageBoutique}/>
       <Route path="/panier" component={Cart} />
+      <Route path="/shipping" component={ShippingScreen} />
+      <Route path="/payment" component={PaymentScreen} />
       </Switch>
   
     </div>

@@ -4,9 +4,10 @@ import Button from 'react-bootstrap/Button'
 import '../beauté/modal.css'
 import ModalNAv from '../beauté/modalNav';
 import Rating from '../../Component/Rating';
-
-
-
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { useDispatch, useSelector } from 'react-redux'
+import { loadCurrentItem, addToCart } from '../../Redux/Action/orderAction'
+import { connect } from 'react-redux'
 
 
 function Modale ({id,el}) {
@@ -16,7 +17,8 @@ function Modale ({id,el}) {
     const [show, setShow] = useState(false);  
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    
+    const [qanty, setQanty] = useState(1)
+    const dispatch = useDispatch()
   
     return (
       <div>
@@ -66,10 +68,18 @@ function Modale ({id,el}) {
         <div className="box-boutik">
        
         <p className="prix-modalBoutik"> Prix: {el.price} DT</p>
-        <div className="Rating-modal"> <Rating class="ratingss"
+        <div className="Rating-modal"> 
+        <Rating style={{ fontSize: 70 }} className="ratingss"
             rating={el.rating}
+           
             
           />
+           <a> <AddShoppingCartIcon style={{ fontSize: 80 }} className="iconPanierModale" 
+            onClick={() => dispatch(addToCart(el._id, qanty))}
+          
+          />
+            
+          </a>
           </div>
         </div>
         </div>
@@ -91,5 +101,12 @@ function Modale ({id,el}) {
         </div>
     );
 }
-  
-  export default Modale;
+const mapDispatchToProps = (dispatch) => {
+  return {
+     addToCart: (id) => dispatch(addToCart(id)),
+    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Modale)
+  //export default Modale;
