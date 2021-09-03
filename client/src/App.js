@@ -21,7 +21,8 @@ import PageBoutique from './Page/Boutique/pageBoutique';
 import Boutique from './Page/Boutique/boutique';
 import Cart from './Page/Cart/panier'
 import ShippingScreen from './Page/Cart/shippingScreen';
-import PaymentScreen from './Page/PaymentScreen';
+import PaymentScreen from './Page/Cart/PaymentScreen';
+
 
 
 
