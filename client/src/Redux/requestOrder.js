@@ -1,13 +1,11 @@
-// import axios from "axios";
+import axios from 'axios'
 
-
-
-// const Api = axios.create({ baseURL: "http://localhost:4005/app/order" });
+const Api = axios.create({ baseURL: 'http://localhost:4005/app/order' })
 
 // //addOrder
-// function addOrder(name, qty, image, product) {
-//     return Api.post("/add", { name, qty, image, product });
-//   }
+function addOrder(orderItems, totalPrice) {
+  return Api.post('/add', { orderItems, totalPrice })
+}
 
 //   //getOrder
 //   function getOrders() {
@@ -25,9 +23,5 @@
 //   return Api.put(`/${id}`);
 // }
 
-
-
-
-
-//   export {addOrder, getOrders, deleteOrder,updateOrder} 
-//   export default {addOrder,getOrders, deleteOrder,updateOrder}
+export { addOrder }
+export default { addOrder }

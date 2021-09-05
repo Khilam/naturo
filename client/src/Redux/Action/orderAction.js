@@ -4,8 +4,11 @@ import {
   ADJUST_ITEM_QTY,
   REMOVE_FROM_CART,
   LOAD_CURRENT_ITEM,
+  SAVE_ORDER_SUCCESS,
+  SAVE_ORDER_FAIL,
 } from '../Const/orderConst'
 import axios from 'axios'
+import { addNewProduct } from '../requestproduct'
 
 export const addToCart = (id, qanty) => async (dispatch) => {
   const { data } = await axios.get(`http://localhost:4005/app/product/${id}`)
@@ -20,7 +23,7 @@ export const addToCart = (id, qanty) => async (dispatch) => {
         rating: data.rating,
         title: data.title,
         _id: data._id,
-        qanty: qanty,
+        qanty: 1,
       },
     })
   } catch (error) {
@@ -53,5 +56,24 @@ export const loadCurrentItem = (item) => {
   return {
     type: LOAD_CURRENT_ITEM,
     payload: item,
+  }
+}
+
+export const saveOrder = (orderItems, totalPrice) => async (dispatch) => {
+  try {
+    const res = await addNewProduct(orderItems, totalPrice)
+    dispatch({
+      type: SAVE_ORDER_SUCCESS,
+      payload: res.data,
+      // payload: {
+      //   cart,
+      //   totalPrice: totalPrice,
+      // },
+    })
+  } catch (error) {
+    dispatch({
+      type: SAVE_ORDER_FAIL,
+      payload: { error: error },
+    })
   }
 }

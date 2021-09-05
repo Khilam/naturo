@@ -3,17 +3,18 @@
     margin-top: 30px;
     background-color: #036145 ;
     border-radius: 0px;
- margin-left: 200px;
+ margin-left: 100px;
  margin-right: 100px;
- width: 750px;
- height: 500px;
+ margin-bottom: 80px;
+ width: 950px;
+ height: 450px;
 
 }
 .title-phyto{
     font-family:'Times New Roman', Times, serif;
     font-size:xx-large;
     font-weight: bold;
-    text-align:right;
+    text-align:center;
 
     
 
@@ -31,11 +32,11 @@
     display: table-column;
 } */
 .img-phyto{
-    width: 500px;
-    height: 300px;
-    border-radius: 20px;
+    width: 450px;
+    height: 400px;
+    border-radius: 0px;
     margin-right: -150px;
-    margin-top: 150px;
+    margin-top: 90px;
     margin-bottom: 20px;
 
 }
@@ -50,25 +51,31 @@
     
     background-color: (181.09deg, #C4C4C4 1.01%, rgba(50, 139, 112, 0.44) 1.02%, rgba(196, 196, 196, 0) 99.14%);
 } 
+Button{
+    margin-top: 40px;
+}
 /*************************************image ************************************/
 
 
-@media (max-width: 550px) {
+@media (max-width: 450px) {
     .card-phyto {
       width: 46%;
       margin-left: 10px;
     }
     .imagearpop{
         width: 46%;
-        margin-left: 5px;
+        
     }
     .Rectang{
         width: 100%;
-       align-items: center;
+     
     }
     .img-phyto{
         width: 36%;
 
+    } 
+    .esâce{
+        width: 40%;
     }
     /* .card-phyto{
 

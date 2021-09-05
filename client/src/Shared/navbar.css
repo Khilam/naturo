@@ -229,16 +229,19 @@ h6{
 /******* respensive ****/
 @media (max-width: 550px) {
   .card-phyto {
-    width: 100%;
-    /* margin-left: 10px; */
+    width: 50%;
+    justify-content: center;
+   
   }
   .rectangle{
     width: 100%;
+    justify-content: center;
+    margin-right: 0px;
   }
   .nav-item{
     width: 50%;
     font-size: 50%;
-    justify-content: safe;
+   margin: 0px;
   }
 
  
@@ -251,11 +254,21 @@ h6{
     width: 100%;
   
   }
-  .rectangle{
-    width: 100%;
+  .rectangle{height: 1250px; 
+margin-bottom: 0px;
+background: #328B70; 
+margin-top: -250px;
+margin-right: 0px;
+margin-left: 0px;
+padding-left: 0px;
+padding-right: 0px;
+margin-bottom: -1000px;
+padding-bottom: 0px;
   }
  
-
+  .nav-item{
+  display: none;
+  }
   
   
   

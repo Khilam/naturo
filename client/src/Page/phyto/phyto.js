@@ -23,7 +23,7 @@ const Phyto = () => {
             <div className="parent1" >
             <h1 className="fraze">Phytothérapie</h1>
   
-            <div >
+            <div  className="all">
             <img  className="imagearpop" src={phyto} alt="fpage1"/>
             </div>
             
