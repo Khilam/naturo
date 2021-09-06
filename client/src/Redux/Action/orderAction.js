@@ -6,6 +6,7 @@ import {
   LOAD_CURRENT_ITEM,
   SAVE_ORDER_SUCCESS,
   SAVE_ORDER_FAIL,
+  REMOVE_ALL_FROM_CART
 } from '../Const/orderConst'
 import axios from 'axios'
 import { addNewProduct } from '../requestproduct'
@@ -37,6 +38,14 @@ export const addToCart = (id, qanty) => async (dispatch) => {
 export const removeFromCart = (itemID) => {
   return {
     type: REMOVE_FROM_CART,
+    payload: {
+      id: itemID,
+    },
+  }
+}
+export const clearCart = (itemID) => {
+  return {
+    type: REMOVE_ALL_FROM_CART,
     payload: {
       id: itemID,
     },

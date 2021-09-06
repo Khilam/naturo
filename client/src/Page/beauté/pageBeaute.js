@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Button from 'react-bootstrap/Button'
 import './modal.css'
 import ModalNAv from './modalNav';
+import '../phyto/phyto.css'
 
 
 // import '../../Shared/navbar.css'
@@ -43,7 +44,7 @@ function Modale ({id,el}) {
     return (
       <div>
           
-        <Button variant="primary" onClick={handleShow}>
+        <Button className="boutton"  variant="primary" onClick={handleShow}>
           Voir plus
         </Button>
   

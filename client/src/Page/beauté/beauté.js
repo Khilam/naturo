@@ -9,7 +9,7 @@ import Modale from './pageBeaute'
 import Footer from '../../Shared/footer'
 import Navbar from '../../Shared/navbar'
 import { getPaperAPI } from '../../Redux/Action/paperAction'
-// import './phyto.css'
+//
 const Beaute = () => {
     const dispatch=useDispatch();
   

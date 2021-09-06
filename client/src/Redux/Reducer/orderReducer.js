@@ -59,12 +59,17 @@ export const cartReducer = (
             : item,
         ),
       }
-    case actionTypes.LOAD_CURRENT_ITEM:
-      return {
-        ...state,
-        currentItem: action.payload,
-      }
-    default:
-      return state
+      case actionTypes.LOAD_CURRENT_ITEM:
+        return {
+          ...state,
+          currentItem: action.payload,
+        }
+      case actionTypes.SAVE_ORDER_SUCCESS:
+        return {
+          ...state,
+          order: action.payload,
+        }
+      default:
+        return state
+    }
   }
-}

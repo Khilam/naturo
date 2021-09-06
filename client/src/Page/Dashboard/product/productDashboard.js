@@ -28,7 +28,7 @@ const ProductsDashboard = ()=>{
     console.log(deleteProduct(id))
   }
   return (
-    <div>
+    <div className="tab">
        <AddProduct/>
         <Table striped bordered hover responsive className="table-sm">
             <thead>

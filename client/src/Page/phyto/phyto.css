@@ -3,16 +3,16 @@
     margin-top: 30px;
     background-color: #036145 ;
     border-radius: 0px;
- margin-left: 100px;
- margin-right: 100px;
+ margin-left: 280px !important;
+ margin-right: 100px !important;
  margin-bottom: 80px;
- width: 950px;
+ width: 750px !important;
  height: 450px;
 
 }
 .title-phyto{
     font-family:'Times New Roman', Times, serif;
-    font-size:xx-large;
+    font-size:x-large;
     font-weight: bold;
     text-align:center;
 
@@ -22,22 +22,25 @@
 .parag-phyto{
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: -10px !important;
     text-align: start;
     font-size:large;
+    width: 300px !important;
 
 }
 /* .phyto-title-parag{
     display: table-column;
 } */
 .img-phyto{
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     border-radius: 0px;
-    margin-right: -150px;
-    margin-top: 90px;
+    margin-right:450px !important;
+    margin-top: 110px;
     margin-bottom: 20px;
+    margin-left: -700px !important;
 
 }
 .parent1{
@@ -46,21 +49,43 @@
 }
 .espace{
     margin-top: -600px;
-    width: 100%;
+    width: 70%;
     height: 100%;
+    margin-left: 50px !important;
     
     background-color: (181.09deg, #C4C4C4 1.01%, rgba(50, 139, 112, 0.44) 1.02%, rgba(196, 196, 196, 0) 99.14%);
 } 
-Button{
-    margin-top: 40px;
+.boutton{
+    /* margin-top: 80px; */
+    margin-left: 500px !important;
+    margin-right: -50px !important;
+    margin-top: 10px;
 }
 /*************************************image ************************************/
 
-
-@media (max-width: 450px) {
+ @media only screen and (max-width:1024){
+.img-phyto{
+    width:100px;
+    margin-left:250px
+}
+.card-phyto{
+    width: 70%;
+    margin-left: 100px;
+}
+.parag-phyto{
+    width: 50%;
+}
+} 
+@media only screen and (min-width:768){
+    .card-phyto {
+        width: 36%;
+        margin-left:0px;
+      } 
+}
+@media only screen and (min-width: 450px) {
     .card-phyto {
       width: 46%;
-      margin-left: 10px;
+      /* margin-left: -60px !important ; */
     }
     .imagearpop{
         width: 46%;
@@ -70,13 +95,24 @@ Button{
         width: 100%;
      
     }
-    .img-phyto{
-        width: 36%;
-
-    } 
-    .esâce{
+  
+    .espace{
         width: 40%;
     }
+    .img-phyto{
+        
+        margin-left:-20px
+    }
+    .parag-phyto{
+        width:250px;
+        margin-left: 400px;
+    }
+.Button{
+    margin-left: 300px !important;
+    margin-right: 300px !important;
+    margin-top: -10px;
+}
+
     /* .card-phyto{
 
     }

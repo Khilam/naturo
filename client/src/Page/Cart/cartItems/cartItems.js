@@ -4,12 +4,16 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { adjustItemQty, removeFromCart } from '../../../Redux/Action/orderAction'
 
-const CartItem = ({ item, adjustQty, removeFromCart }) => {
+const CartItem = ({ item, adjustQty, removeFromCart}) => {
   const [input, setInput] = useState(1)
+  const [cart, setCart] = useState()
 
   const onChangeHandler = (e) => {
     setInput(e.target.value)
     //adjustQty(item._id, e.target.value)
+  }
+  const clearCart = () => {
+    setCart([])
   }
   useEffect(() => {
     {
@@ -24,7 +28,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
         <p className="details__title">{item.title}</p>
         {/* <p className="details__desc">{item.description}</p> */}
         <p className="details__price">$ {item.price}</p>
-        <p className="details__price">$ {item.price}*{item.qty}</p>
+        <p className="details__price">$ {item.price*item.qty}</p>
       </div>
       <div className="cartItem__actions">
         <div className="cartItem__qty">
@@ -56,11 +60,17 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
           onClick={() => removeFromCart(item._id)}
           className="actions__deleteItemBtn"
         >
+          
           <img
             src="https://image.flaticon.com/icons/svg/709/709519.svg"
             alt=""
           />
         </button>
+        <button
+        onClick={() => clearCart()}
+          className="actions__deleteItemBtn"
+        >
+          </button>
       </div>
     </div>
   )
