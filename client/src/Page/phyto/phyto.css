@@ -1,20 +1,24 @@
 .card-phyto{
     display: flex;
     margin-top: 30px;
-    background-color: #036145 ;
+    background-color: #328B70;
     border-radius: 0px;
  margin-left: 280px !important;
- margin-right: 100px !important;
+ margin-right: 200px !important;
  margin-bottom: 80px;
- width: 750px !important;
- height: 450px;
+ width: 950px !important;
+ height: 550px;
+
 
 }
 .title-phyto{
     font-family:'Times New Roman', Times, serif;
     font-size:x-large;
-    font-weight: bold;
+    font-weight:bold;
     text-align:center;
+    color:#fff;
+    margin-left: 50px;
+    margin-top: 20px;
 
     
 
@@ -23,43 +27,46 @@
     color: black;
     font-family: 'Times New Roman', Times, serif;
     margin-left: 30px;
-    margin-top: 20px;
-    margin-right: -10px !important;
+    margin-top: 80px !important;
+    margin-right: -200px !important;
     text-align: start;
-    font-size:large;
-    width: 300px !important;
+    font-size:25px;
+    width: 400px !important;
 
 }
 /* .phyto-title-parag{
     display: table-column;
 } */
 .img-phyto{
-    width: 400px;
-    height: 350px;
+    width: 500px;
+    height: 450px;
     border-radius: 0px;
     margin-right:450px !important;
-    margin-top: 110px;
-    margin-bottom: 20px;
-    margin-left: -700px !important;
+    margin-top: 150px !important;
+    margin-bottom: 40px !important;
+    margin-left: -800px !important;
+   
 
 }
 .parent1{
     margin-top: -50px;
+  
     background-color: linear-gradient(181.09deg, #C4C4C4 1.01%, rgba(50, 139, 112, 0.44) 1.02%, rgba(196, 196, 196, 0) 99.14%);
 }
 .espace{
     margin-top: -600px;
     width: 70%;
     height: 100%;
-    margin-left: 50px !important;
+    margin-left: 0px !important;
     
     background-color: (181.09deg, #C4C4C4 1.01%, rgba(50, 139, 112, 0.44) 1.02%, rgba(196, 196, 196, 0) 99.14%);
 } 
 .boutton{
     /* margin-top: 80px; */
+   
     margin-left: 500px !important;
-    margin-right: -50px !important;
-    margin-top: 10px;
+    margin-right: -350px !important;
+    margin-top: -30px;
 }
 /*************************************image ************************************/
 

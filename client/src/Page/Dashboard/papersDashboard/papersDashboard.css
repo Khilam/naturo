@@ -67,6 +67,9 @@
     background-color: transparent;
 
 }
+Button{
+    justify-content: space-evenly;
+}
 
 @media (max-width: 550px) {
     .media {
