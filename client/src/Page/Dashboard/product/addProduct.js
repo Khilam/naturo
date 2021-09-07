@@ -34,7 +34,7 @@ setShow(false)
     <div>
     <div className='container mt-5'>
  <Button variant="primary" onClick={handleShow}>
-   Add Product
+   Ajouter Produit
 </Button>
 
 <Modal show={show} onHide={handleClose}>

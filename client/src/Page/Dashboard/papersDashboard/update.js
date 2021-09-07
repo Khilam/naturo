@@ -42,7 +42,7 @@ const UpdatePaper = ({el,id}) => {
 
 <Modal show={show} onHide={handleClose}>
 <Modal.Header closeButton>
-{/* <EditIcon className="dash-paper-edit"/> */}
+<h3>Modifier Paper </h3>
 </Modal.Header>
 <Modal.Body>
 <Form >

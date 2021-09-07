@@ -43,7 +43,7 @@ const UpdateProduct = ({el,id}) => {
 
 <Modal show={show} onHide={handleClose}>
 <Modal.Header closeButton>
-{/* <EditIcon className="dash-paper-edit"/> */}
+<h3>Modifier Prodiut</h3>
 </Modal.Header>
 <Modal.Body>
 <Form >

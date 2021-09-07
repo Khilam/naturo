@@ -62,13 +62,15 @@
     margin-top: -40px;
 }
 .dash-paper-editt{
-    margin-top: 10px;
-    width: 50px;
+    margin-top: 10px !important;
+    width: 50px !important;
     background-color: transparent;
 
 }
 Button{
     justify-content: space-evenly;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 550px) {

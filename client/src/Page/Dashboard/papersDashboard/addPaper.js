@@ -31,12 +31,12 @@ setShow(false)
     <div>
     <div className='container mt-5'>
  <Button variant="primary" onClick={handleShow}>
-   Add PAper
+   Ajouter Paper
 </Button>
 
 <Modal show={show} onHide={handleClose}>
 <Modal.Header closeButton>
-<Modal.Title className="title-modal">Add Item</Modal.Title>
+<Modal.Title className="title-modal">Ajouter Paper</Modal.Title>
 </Modal.Header>
 <Modal.Body>
 <Form >
