@@ -1,86 +1,68 @@
-import React, { useState, useEffect } from 'react'
-// import styles from './CartItem.module.css'
+import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import DeleteIcon from '@material-ui/icons/Delete'
+import { Button } from 'react-bootstrap'
+import {
+  removeFromCart,
+  saveOrder,
+  adjustItemQty,
+} from '../../../Redux/Action/orderAction'
+import '../panier.css'
 
-import { connect } from 'react-redux'
-import { adjustItemQty, removeFromCart } from '../../../Redux/Action/orderAction'
-
-const CartItem = ({ item, adjustQty, removeFromCart}) => {
-  const [input, setInput] = useState(1)
-  const [cart, setCart] = useState()
-
-  const onChangeHandler = (e) => {
-    setInput(e.target.value)
-    //adjustQty(item._id, e.target.value)
-  }
-  const clearCart = () => {
-    setCart([])
-  }
+const CartItems = ({ item }) => {
+  const [totalPrice, setTotalPrice] = useState(0)
+  const [totalItems, setTotalItems] = useState(0)
+  const [qty, setQty] = useState(1)
+  const dispatch = useDispatch()
   useEffect(() => {
-    {
-      adjustQty(item._id, input)
-    }
-  }, [input])
+    let items = 0
+    let price = 0
 
+    items += Number(item.qanty)
+    price += item.qanty * item.price
+
+    setTotalItems(items)
+    setTotalPrice(price)
+    dispatch(adjustItemQty(item._id, qty))
+  }, [qty, totalPrice, totalItems, setTotalPrice, setTotalItems])
   return (
-    <div className="cartItem">
-      <img className="cartItem__image" src={item.imageUrl} alt={item.title} />
-      <div className="cartItem__details">
-        <p className="details__title">{item.title}</p>
-        {/* <p className="details__desc">{item.description}</p> */}
-        <p className="details__price">$ {item.price}</p>
-        <p className="details__price">$ {item.price*item.qty}</p>
-      </div>
-      <div className="cartItem__actions">
-        <div className="cartItem__qty">
-        <div>Qty</div>
-                          
-                            {/* <select
-                              value={qty}
-                              onChange={(e) => setQty(e.target.value)}
-                            >
-                              {[...Array(item.countInStock).keys()].map(
-                                (x) => (
-                                  <option key={x + 1} value={x + 1}>
-                                    {x + 1}
-                                  </option>
-                                )
-                              )}
-                            </select> */}
-
-<input
+    <div>
+      <tr key={item.id}>
+        <div className="table-row">
+          <td className="col col-2">{item.title}</td>
+          <td className="col col-1">{item.price}</td>
+          <td>
+            <img className="col col-3" src={item.imageUrl} alt="" />
+          </td>
+          <td className="col col-4"></td>
+          <input
             min="1"
             type="number"
             id="qty"
             name="qty"
-            value={input}
-            onChange={onChangeHandler}
+            value={qty}
+            // onChange={onChangeHandler}
+
+            onChange={(e) => {
+              setQty(e.target.value)
+              dispatch(adjustItemQty(item._id, qty))
+            }}
           />
-                          </div>
-        <button
-          onClick={() => removeFromCart(item._id)}
-          className="actions__deleteItemBtn"
-        >
-          
-          <img
-            src="https://image.flaticon.com/icons/svg/709/709519.svg"
-            alt=""
-          />
-        </button>
-        <button
-        onClick={() => clearCart()}
-          className="actions__deleteItemBtn"
-        >
-          </button>
-      </div>
+
+          <td className="col col-1">{item.price * item.qanty}</td>
+          <td className="col col-1">
+            <Button className="col col-1">
+              <DeleteIcon
+                onClick={() => dispatch(removeFromCart(item._id))}
+                className="deletoneitem"
+              />
+            </Button>
+          </td>
+          <td></td>
+        </div>
+      </tr>
     </div>
   )
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    adjustQty: (id, value) => dispatch(adjustItemQty(id, value)),
-    removeFromCart: (id) => dispatch(removeFromCart(id)),
-  }
-}
-
-export default connect(null, mapDispatchToProps)(CartItem)
+export default CartItems

@@ -1,14 +1,12 @@
-// const express = require('express')
-// const router = express.Router()
-// const order = require('../Controller/orderController')
-// // const  protect  = require ( '../Controller/authController')
+const express=require ("express")
+const router=express.Router()
+const order=require("../Controller/orderController")
+const authentification =require ("../Middleware/auth")
 
-// // const  admin  = require ( '../Controller/authController')
-
-// router.post('/add', order.addOrderItems)
-// // router.get('/myorders', order.getMyOrders)
-// // router.get('/:id', getOrderById)
-// // router.route('/:id/pay').put(protect, updateOrderToPaid)
-// // router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered)
-
-// module.exports = router
+//post order
+router.post("/postOrder",authentification,order.addOrderItems)
+// get order byId
+router.get("/getOrderById/:id",order.getOrderById)
+// get All orders
+router.get("/getOrders",order.getOrders)
+module.exports=router 

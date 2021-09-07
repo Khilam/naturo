@@ -8,9 +8,11 @@ const db_connection = ()=>{
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: true,
+        
       })
       .then(() =>{console.log('data_base connected')})
       .catch(()=>{console.log('error')})
 }
+
 
 module.exports = db_connection
