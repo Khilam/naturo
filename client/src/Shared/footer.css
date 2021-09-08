@@ -1,12 +1,13 @@
 .footer{
     background-color:  #05563E;
     font-size:small;
-    margin-top: -90px !important;
+    margin-top: -150px !important;
     margin-bottom: -50px !important; 
-   margin-right: 10px !important;
-    margin-left: 700px;
+   margin-right: -250px !important;
+    margin-left: 840px;
+    text-align: center;
  
-  width: 550px;
+  width: 450px;
   
     color: #fff;
    
@@ -16,7 +17,7 @@
 }
 .footer-div{
     background-color:  #05563E;
-    font-size:smaller;
+    font-size:x-small;
     margin-top: 60px;
     margin-right: -400px !important;
    
@@ -30,7 +31,7 @@
    
 } */
 .iconF1{
-    font-size: x-large !important;
+    font-size: xx-large !important;
     margin-left: -1450px !important;
     margin-right: -22px !important;
     color: #05563E;
@@ -41,7 +42,7 @@
 
 }
 .iconF2{
-    font-size: x-large !important;
+    font-size: xx-large !important;
     justify-items:start;
     margin-left: -79px !important;
     margin-right: -21px !important;
@@ -53,7 +54,7 @@
 
 }
 .iconF3{
-    font-size: x-large !important;
+    font-size: xx-large !important;
     justify-content: start;
     margin-left: -75px !important;
     margin-right: -20px !important;
@@ -66,10 +67,11 @@
 }
 .footer-titre{
     margin-top: -25px;
-    margin-bottom: 65px !important;
-    margin-left: -650px;
+    margin-bottom: 100px !important;
+    margin-left: -550px;
     font-size: x-large;
     color: #fff;
     font-family:'Times New Roman', Times, serif;
   
 }
+

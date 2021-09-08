@@ -20,11 +20,11 @@ function Navbar() {
 	return (
 
   
-        <div >
+        <div  >
 
 
- <h1 className="bigTitle" href="#home" >
-      <FaPagelines/> NATUROPATHIE </h1> 
+ <h1  className="bigTitle" >
+      <FaPagelines /> NATUROPATHIE </h1> 
       <div className="navbar navbar-expand ">
             <div className="container-fluid">
                 

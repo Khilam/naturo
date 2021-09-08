@@ -4,13 +4,14 @@ import acceuil from './../images/acceuil.jpg'
 import beauté from './../images/beauté.jpg'
 import maladies from './../images/maladies.jpg'
 import phyto from './../images/phyto.jpg'
-import boutique from './../images/boutique.jpeg'
+import boutiquePrincipal from './../images/boutikPrincipal.jpg'
 import treemen from './../images/treeman.jpg'
 import Navbar from '../Shared/navbar'
 import Footer from '../Shared/footer'
 import { useDispatch, useSelector } from 'react-redux'
 import  { useEffect } from 'react'
 import { getPaperAPI } from '../Redux/Action/paperAction'
+import { Link } from 'react-router-dom'
 
 
 
@@ -50,16 +51,16 @@ console.log('keyword', keyword)
            <div className="total-card">
             <div className="card">
                 <div >
-                    <img className="card-imag" src={phyto} alt="imgphyto"/>
+                    <Link to="/phyto"><img   className="card-imag" src={phyto} alt="imgphyto"/></Link>
                     <div  className="deco">
-                        <h3 className="card-text">PHYTOTHERAPIE</h3>
+                        <h3 className="card-text" >PHYTOTHERAPIE </h3>
 
                     </div>
                 </div>
             </div>
             <div className="card">
                 <div >
-                    <img className="card-imag" src={maladies} alt="imgphyto"/>
+                    <Link to="/Maladies"><img className="card-imag" src={maladies} alt="imgphyto"/></Link>
                     <div  className="deco">
                         <h3 className="card-text">MALADIES</h3>
 
@@ -69,7 +70,7 @@ console.log('keyword', keyword)
             
             <div className="card">
                 <div >
-                    <img className="card-imag" src={beauté} alt="imgphyto"/>
+                   <Link to="/beauté"> <img className="card-imag" src={beauté} alt="imgphyto"/></Link>
                     <div  className="deco">
                         <h3 className="card-text">BEAUTÉ</h3>
 
@@ -78,7 +79,7 @@ console.log('keyword', keyword)
             </div>
             <div className="card">
                 <div >
-                    <img className="card-imag" src={boutique} alt="imgphyto"/>
+                   <Link to="/boutique"> <img className="card-imag" src={boutiquePrincipal} alt="imgphyto"/></Link>
                     <div  className="deco">
                         <h3 className="card-text">BOUTIQUE</h3>
 

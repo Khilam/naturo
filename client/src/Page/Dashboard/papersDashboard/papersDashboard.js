@@ -50,7 +50,7 @@ const PapresDashboard = ()=>{
                 <tr key={paper._id}>
                   <td className="paper-dash">{paper._id}</td>
                   <td className="paper-dash">{paper.titre}</td>
-                  <td className="paper-dash">{paper.contenu.substring(0, 50)}...</td>
+                  <td className="paper-dash">{paper.contenu.substring(0, 150)}...</td>
                   <td className="paper-dash">{paper.catégorie}</td>
                   <td> <img className="dash-img" src={paper.image} alt=""/></td>
                   <td>
