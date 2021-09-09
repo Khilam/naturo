@@ -34,7 +34,7 @@ const Signup = () => {
 						<div className="col-12 text-center align-self-center py-5">
 						  <div className="section pb-5 pt-5 pt-sm-2 text-center">
 							 { /************* Login Form ****************/}
-							<h6 className="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+							<h6 className=" inout mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
 							<input className="checkbox" type="checkbox" id="reg-log" name="reg-log" />
 							<label htmlFor="reg-log" />
 							<div className="card-3d-wrap mx-auto">
@@ -42,7 +42,7 @@ const Signup = () => {
 								<div className="card-front">
 								  <div className="center-wrap">
 									<div className="section text-center">
-									  <h4 className="mb-4 pb-3">Log In</h4>
+									  <h4 className=" in mb-4 pb-3">Log In</h4>
 								
 
 

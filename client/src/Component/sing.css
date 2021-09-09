@@ -28,16 +28,17 @@ p {
   font-size: 14px;
   line-height: 1.7;
 }
-h4 {
+.in {
   font-weight: 600;
   margin-bottom: 10px;
   font-family:'Times New Roman', Times, serif;
 
 }
-h6 span{
+.inout{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
+  text-align: center;
 }
 .section{
   position: relative;
@@ -139,9 +140,9 @@ h6 span{
   position: absolute;
   width: 100%;
   padding: 0 35px;
-  top: 50%;
-  left: 0;
-  transform: translate3d(0, -50%, 35px) perspective(100px);
+  /* margin-top: 50%; */
+  margin-left: 0;
+  transform: translated(0, -70%, 35px) perspective(100px);
   z-index: 20;
   display: block;
 }
