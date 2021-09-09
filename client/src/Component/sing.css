@@ -74,7 +74,7 @@ p {
   height: 36px;
   border-radius: 50%;
   color: #ffeba7;
-  background-color: #076040;
+  background-color: #84c2a1;
   font-family: 'unicons';
   content: '\eb4f';
   z-index: 20;
@@ -275,17 +275,18 @@ p {
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
   font-family: 'Times New Roman', Times, serif;
   margin-right: 12px;
+  margin-bottom: 20px !important;
 
   
 }
 .btn:active,
 .btn:focus{  
-  background-color: #102770;
+  background-color: #84c2a1;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn:hover{  
-  background-color: #043020;
+  background-color: #84c2a1;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }

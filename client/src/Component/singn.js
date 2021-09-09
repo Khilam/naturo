@@ -72,7 +72,7 @@ const Signup = () => {
 								  <div className="center-wrap">
 									<div className="section text-center">
 										{/* *************** Register Form  **************/}
-									  <h4 className="mb-4 pb-3">Sign Up</h4>
+									  <h4 className=" in mb-4 pb-3">Sign Up</h4>
 									  <div className="form-group">
 										<input type="text" name="logname" className="form-style" placeholder="Your Name" id="logname" autoComplete="off" onChange={(e) => setName(e.target.value)}/>
 										<i className="input-icon uil uil-user" />

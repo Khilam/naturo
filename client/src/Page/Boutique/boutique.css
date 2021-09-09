@@ -16,8 +16,8 @@
     margin-right: 20px;
     margin-bottom: 10px;
     background-color: #fff;
-    border: solid;
-    box-shadow: 10px 10px rgba(0,0,0,.15);
+    border: solid #e2e2e2;
+    box-shadow: 10px 10px #e2e2e2;
   
     border-radius: 0px;
     position: relative;
@@ -28,7 +28,7 @@
   }
   
   .media:hover {
-    box-shadow: 10px 10px #076040;
+    box-shadow: 10px 10px #84c2a1;
     /* color: black; */
    
   }

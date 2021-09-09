@@ -40,23 +40,23 @@ color: #05563E;
           margin-right: 15px !important;
           margin-left: 15px !important;
           color: #05563E !important;
-          font-size: large;
-          font-family: 'Courier New', Courier, monospace;
+          font-size: x-large !important;
+          font-family:Georgia, 'Times New Roman', Times, serif!important;
           justify-content: space-around;
           
       }
      
       .fraze{
           margin-top: 140px;
-          color: #05563E;
+          color: #84c2a1;
           text-align: center;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-family:'Times New Roman', Times, serif !important;
       }
       .fraze2{
         margin-top: 100px !important;
         margin-bottom: 35px;
         color: #05563E;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family:'Times New Roman', Times, serif!important;
       }
 
 /************************ page1 ************************************/

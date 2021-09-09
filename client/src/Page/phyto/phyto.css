@@ -49,9 +49,14 @@
     margin-top: 150px !important;
     margin-bottom: 40px !important;
     margin-left: -800px !important;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
+    box-shadow: 10px 10px rgba(0,0,0,.15);
 
 }
+.img-phyto:hover {
+    box-shadow: 10px 10px #84c2a1;
+    /* color: black; */
+   
+  }
 .parent1{
     margin-top: -50px;
   
@@ -71,7 +76,7 @@
    
     margin-left: 300px !important;
     margin-right: -350px !important;
-    margin-top: -2%;
+    margin-top: 2%;
 }
 /*************************************image ************************************/
 
