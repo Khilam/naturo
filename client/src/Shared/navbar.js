@@ -37,12 +37,13 @@ function Navbar() {
                    
                
                     < div className="navbar-nav">
+                    <Link to="/" className="nav-item nav-link">Acceuil </Link>
                         <Link to="Phyto" className="nav-item nav-link active phyto">Phytothérapie</Link>
                         <Link to="Maladies" className="nav-item nav-link">Maladies</Link>
                         <Link to="Beauté" className="nav-item nav-link">Beauté</Link>
                         <Link to="Boutique" className="nav-item nav-link">Boutique</Link>
                         <Link to="apropos" className="nav-item nav-link">À propos </Link>
-                        <Link to="/" className="nav-item nav-link">Acceuil </Link>
+                        
                        
    
 

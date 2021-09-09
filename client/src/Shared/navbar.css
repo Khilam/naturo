@@ -145,10 +145,11 @@ background: #05563E;
 /* **************************Contact ******************************/
 .cadre{
 background-color: #05563E;
-width: 1250px;
+width: 1220px;
 height: 444px;
-margin-left: 10px;
-margin-right: 10px;
+margin-left: 30px;
+margin-right: 50px !important;
+padding-right: 20px;
 margin-top: 200px;
 display: flex;
 
@@ -162,15 +163,15 @@ display: flex;
  margin-left: 40px;
  margin-left: -10px !important;
  margin-right: auto;
- width: 450px;
+ width: 400px;
  font-family: 'Times New Roman', Times, serif;
  font-size:large;
 }
 .paragraf2{
   text-align:start;
- margin-left: 40px;
- margin-left: -320px !important;
- margin-right: auto;
+ /* margin-left: 40px; */
+ margin-left: -300px !important;
+ margin-right: 70px;
  
  color: #fff;
  font-family: 'Times New Roman', Times, serif;
@@ -196,7 +197,7 @@ h6{
 .treemen{
   padding-left: 50px;
   margin-right: 50px;
-  width: 250px;
+  width: 350px;
   height: 444px;
 }
 /* .nousommes{

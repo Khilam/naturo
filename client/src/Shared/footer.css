@@ -11,7 +11,7 @@
   
     color: #fff;
    
-
+    padding-bottom: 7px;
     font-family: 'Courier New', Courier, monospace;
    
 }
@@ -19,6 +19,8 @@
     background-color:  #05563E;
     font-size:x-small;
     margin-top: 60px;
+    padding-top: 7px;
+
     margin-right: -400px !important;
    
    
