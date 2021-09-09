@@ -4,9 +4,12 @@ import { saveOrder } from '../../Redux/Action/orderAction'
 import { connect, useSelector, useDispatch } from 'react-redux'
 import Navbar from '../../Shared/navbar'
 import CartItems from './cartItems/cartItems'
+import {Button} from 'react-bootstrap'
+import {Link} from 'react-router-dom'
 import './panier.css'
 
-const Cart = () => {
+const Cart = ({history}) => {
+  console.log(history)
   const [totalPrice, setTotalPrice] = useState(0)
   const [totalItems, setTotalItems] = useState(0)
   const [qty, setQty] = useState(1)
@@ -39,11 +42,11 @@ const Cart = () => {
         <h2>Votre panier</h2>
         <ul class="responsive-table">
           <li class="table-header">
-            <div class="col col-1">Produit</div>
+            <div class="col col-3">Produit</div>
             <div class="col col-1">Prix</div>
-            <div class="col col-3">Image</div>
-            <div class="col col-4">Quantité</div>
-            <div class="col col-1">Somme</div>
+            <div class="col col-4">Image</div>
+            <div class="col col-1">Quantité</div>
+            <div class="col col-3">Somme</div>
             <div class="col col-1"></div>
           </li>
 
@@ -54,23 +57,26 @@ const Cart = () => {
           </tbody>
         </ul>
 
-        <h4 className="summary__titre">Cart Summary</h4>
+        <h4 className="total">Cart Summary</h4>
         <div className="summary__price">
           <span>TOTAL: ({totalItems} items)</span>
           <span>$ {totalPrice}</span>
         </div>
-        <button
-          className="summary__checkoutBtn"
-          onClick={() => dispatch(saveOrder(cart, totalPrice))}
+        <Button 
+        
+          
+          onClick={() => dispatch(saveOrder(cart, totalPrice,history))}
+          
         >
-          Proceed To Checkout
-        </button>
-        {/* <Button className="col col-1">
-                      <DeleteIcon
-                        onClick={() => dispatch(clearCart())}
-                        className="deletoneitem"
-                      />
-                    </Button> */}
+        
+         Valider
+        </Button>
+      <Link to ="/boutique" className="bouttonP"  >
+                      
+                      <Button>Retour </Button>
+                       
+                     
+                    </Link>
       </div>
     </div>
   )

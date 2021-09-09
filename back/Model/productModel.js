@@ -17,8 +17,7 @@ const productSchema = new Schema(
     },
     conseils:{
         type: String,
-        required: true,
-
+       required: true,
     },
     price: {
       type: String,

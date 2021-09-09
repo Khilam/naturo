@@ -9,7 +9,7 @@ import {
   REMOVE_ALL_FROM_CART
 } from '../Const/orderConst'
 import axios from 'axios'
-import { addNewProduct } from '../requestproduct'
+import { addOrder } from '../requestOrder'
 
 export const addToCart = (id, qanty) => async (dispatch) => {
   const { data } = await axios.get(`http://localhost:4005/app/product/${id}`)
@@ -57,7 +57,7 @@ export const adjustItemQty = (itemID, qty) => {
     type: ADJUST_ITEM_QTY,
     payload: {
       id: itemID,
-      qty,
+      qty:qty,
     },
   }
 }
@@ -68,9 +68,9 @@ export const loadCurrentItem = (item) => {
   }
 }
 
-export const saveOrder = (orderItems, totalPrice) => async (dispatch) => {
+export const saveOrder = (orderItems, totalPrice,history) => async (dispatch) => {
   try {
-    const res = await addNewProduct(orderItems, totalPrice)
+    const res = await addOrder(orderItems, totalPrice)
     dispatch({
       type: SAVE_ORDER_SUCCESS,
       payload: res.data,
@@ -79,6 +79,7 @@ export const saveOrder = (orderItems, totalPrice) => async (dispatch) => {
       //   totalPrice: totalPrice,
       // },
     })
+    history.push('/ordervalidation')
   } catch (error) {
     dispatch({
       type: SAVE_ORDER_FAIL,

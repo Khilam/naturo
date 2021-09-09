@@ -27,15 +27,15 @@ const CartItems = ({ item }) => {
   }, [qty, totalPrice, totalItems, setTotalPrice, setTotalItems])
   return (
     <div>
-      <tr key={item.id}>
+      <div key={item.id}>
         <div className="table-row">
-          <td className="col col-2">{item.title}</td>
+          <td className="col col-3">{item.title}</td>
           <td className="col col-1">{item.price}</td>
           <td>
-            <img className="col col-3" src={item.imageUrl} alt="" />
+            <img className="col col-4" src={item.imageUrl} alt="" />
           </td>
-          <td className="col col-4"></td>
-          <input
+       <td  className="col col-1" >
+          <input className="input"
             min="1"
             type="number"
             id="qty"
@@ -48,20 +48,23 @@ const CartItems = ({ item }) => {
               dispatch(adjustItemQty(item._id, qty))
             }}
           />
-
-          <td className="col col-1">{item.price * item.qanty}</td>
-          <td className="col col-1">
-            <Button className="col col-1">
+  </td>
+          <td className="col col-2">{item.price * item.qanty}
+       </td>
+       <td>
+            <Button className="col col-2">
               <DeleteIcon
                 onClick={() => dispatch(removeFromCart(item._id))}
                 className="deletoneitem"
               />
             </Button>
+            
           </td>
-          <td></td>
+          
+       
         </div>
-      </tr>
-    </div>
+        </div>
+        </div>
   )
 }
 

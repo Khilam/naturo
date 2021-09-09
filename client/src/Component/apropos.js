@@ -1,10 +1,11 @@
 import React from 'react'
-import './apropos.css'
+
 import apropos from './../images/apropos.jpg'
 import conceptnaturo from './../images/conceptsnatoro.jpg'
 import nousommes from './../images/nousommes.jpg'
 import Navbar from '../Shared/navbar'
 import Footer from '../Shared/footer'
+import './apropos.css'
 
 function Apropos() {
     return (

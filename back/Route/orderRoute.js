@@ -4,7 +4,7 @@ const order=require("../Controller/orderController")
 const authentification =require ("../Middleware/auth")
 
 //post order
-router.post("/postOrder",authentification,order.addOrderItems)
+router.post("/add",order.addOrderItems)
 // get order byId
 router.get("/getOrderById/:id",order.getOrderById)
 // get All orders

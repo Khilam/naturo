@@ -20,6 +20,7 @@ import PageMaladie from './Page/maladie/pageMaladies';
 import PageBoutique from './Page/Boutique/pageBoutique';
 import Boutique from './Page/Boutique/boutique';
 import Cart from './Page/Cart/panier'
+import OrderValidation from './Page/Cart/cartItems/pageOrderValidation';
 
 
 
@@ -55,7 +56,7 @@ function App() {
       <Route exact path="/pageMaladies" component={PageMaladie}/>
       <Route exact path="/pageBoutique" component={PageBoutique}/>
       <Route path="/panier" component={Cart} />
-      
+      <Route path="/ordervalidation" component={OrderValidation} />
       </Switch>
   
     </div>

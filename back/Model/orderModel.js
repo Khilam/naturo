@@ -11,23 +11,23 @@ const orderSchema = new mongoose.Schema(
     orderItems: [
       {
         title:
-        { type: String, 
-        required: true },
-        qty: 
-        { type: Number,
-         required: true },
-        img:
-         { type: String, 
-         required: true },
+        { type: String },
+        qanty: 
+        { type: String},
+        imageUrl:
+         { type: String},
         price: 
-        { type: Number,
-        required: true }, 
+        { type: String}, 
+        rating: 
+        { type: String}, 
+        description: 
+        { type: String}, 
 
-        product: {
-          type: mongoose.Schema.Types.ObjectId,
-          required: true,
-          ref: 'Produit',
-        },
+        // product: {
+        //   type: mongoose.Schema.Types.ObjectId,
+        //   required: true,
+        //   ref: 'Produit',
+        // },
       },
     ],
     
