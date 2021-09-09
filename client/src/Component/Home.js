@@ -45,7 +45,7 @@ console.log('keyword', keyword)
             </div>
             {/******* * ** ****Crad *******/}
             <div>
-            <h3 className="noservices">NOS SERVICES</h3>
+            <h3 className="noservices"><b>NOS SERVICES</b></h3>
             </div>
             </div>
            <div className="total-card">
@@ -114,7 +114,7 @@ Le but de ces consultations est de vous apporter une réponse globale à vos pro
 <img className="treemen" src={treemen} alt="treemen"/>
 </div>
 <div className="paragraf2">
-    <h6>Qu’est-ce qu’un naturopathe ?</h6>
+    <h6 className="hh6">Qu’est-ce qu’un naturopathe ?</h6>
     <p>Le naturopathe est un éducateur de santé.  Il établit un bilan de vitalité personnalisé et vous permet de mieux vous connaître. Vous prendrez conscience de vos forces et de vos faiblesses, de votre niveau d’énergie vitale. Vous repartirez avec une meilleure connaissance de votre organisme. Ensemble, vous établirez un programme qui vous permettra d’optimiser votre forme : alimentation, habitudes de vie à mettre en place, conseils phytothérapie et aromathérapie. Le rôle du naturopathe est ainsi de vous rendre le plus informé possible et le plus autonome vis-à-vis de votre santé.</p>
 </div>
 </div>
