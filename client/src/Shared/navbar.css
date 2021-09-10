@@ -13,12 +13,13 @@ color: #05563E;
         position: relative;
         transition: .5s;
         z-index: 999;
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 60px;
+        margin-right: 60px;
       }
       .navbar-nav{
         margin-top: 60px;
         text-align: center;
+    
       }
       .navbar.nav-sticky {
         position: fixed;
@@ -37,14 +38,16 @@ color: #05563E;
         
       }
       .nav-item{
+     
           margin-right: 15px !important;
           margin-left: 15px !important;
           color: #05563E !important;
           font-size: x-large !important;
           font-family:Georgia, 'Times New Roman', Times, serif!important;
-          justify-content: space-around;
+          justify-content: space-evenly !important;
           
       }
+     
      
       .fraze{
           margin-top: 140px;

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Button} from 'react-bootstrap'
 import { FaPagelines} from 'react-icons/fa';
 import {BsPersonFill} from 'react-icons/bs'
 import {FaShoppingCart} from 'react-icons/fa'
@@ -7,16 +7,15 @@ import {FaShoppingCart} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import './searchanimate.css'
 
-
-
-
 import "./navbar.css"
 
 
 
 function Navbar() {
  
-    
+
+ 
+  
 	return (
 
   
@@ -49,12 +48,13 @@ function Navbar() {
 
                         <div className="icons">
                       
-                        <Link to="sign" className="nav-item nav-link"><BsPersonFill/></Link>
+                        <Link to="sign" className="nav-item nav-link"><BsPersonFill  /></Link>
                         <Link to="/panier">
                 <a className="nav-item nav-link">
-                  <FaShoppingCart />
+                < FaShoppingCart /> 
                 </a>
               </Link>
+         
 
               
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
@@ -64,6 +64,7 @@ function Navbar() {
           <a href="search" className="search-btn">
             <i className="fas fa-search" />      
           </a>
+        
         </div>
                         {/* <Link to="searchAnimate" className="nav-item nav-link"><FaSearch/></Link> */}
                        </div>
