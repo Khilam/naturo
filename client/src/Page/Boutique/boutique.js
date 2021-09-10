@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import boutikPrincipal from '../../images/boutikPrincipal.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
+import { useEffect} from 'react'
 import Navbar from '../../Shared/navbar'
 import Footer from '../../Shared/footer'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
@@ -15,6 +15,14 @@ import { connect } from 'react-redux'
 import { loadCurrentItem, addToCart } from '../../Redux/Action/orderAction'
 
 const Boutique = ({ boutique }) => {
+
+  const [keyword, setKeyword] = useState('')
+
+    const submitHandler = (e) => {
+      setKeyword(e.target.value)
+      
+    }
+
   const [qanty, setQanty] = useState(1)
   const dispatch = useDispatch()
   const product = useSelector((state) => state.product.datas)
@@ -24,7 +32,7 @@ const Boutique = ({ boutique }) => {
   console.log('my data', product)
   return (
     <div>
-      <Navbar />
+      <Navbar  onChange={submitHandler}/>
       <div className="parent1">
         <h1 className="fraze">Boutique</h1>
 
@@ -36,7 +44,9 @@ const Boutique = ({ boutique }) => {
       </div>
       <div className="espace" />
       <div className="trending">
-        {product.map((el, key) => (
+        {product
+       .filter((el) => el.title.toLowerCase().includes(keyword.toLowerCase()))
+        .map((el, key) => (
           <div key={key}>
             <div className="media">
               <img className="poster" src={el.imageUrl} alt="" />
@@ -44,7 +54,7 @@ const Boutique = ({ boutique }) => {
               <div className="phyto-title-parag">
                 <Modale id={el._id} el={el} />
                 {/* <h6 className="title">{el.title} </h6> */}
-
+                
                 <h6 className="title">Prix: {el.price} DT</h6>
                 <Rating className="Rating-boutik" rating={el.rating} />
                 {/* <ListGroup.Item>

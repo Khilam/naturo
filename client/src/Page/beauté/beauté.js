@@ -1,7 +1,7 @@
 import React from 'react'
 import beauté from '../../images/beauté.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import {useEffect} from 'react'
+import {useEffect,useState} from 'react'
 import '../phyto/phyto.css'
 
 
@@ -11,6 +11,14 @@ import Navbar from '../../Shared/navbar'
 import { getPaperAPI } from '../../Redux/Action/paperAction'
 //
 const Beaute = () => {
+    const [keyword, setKeyword] = useState('')
+
+    const submitHandler = (e) => {
+      setKeyword(e.target.value)
+      
+    }
+
+
     const dispatch=useDispatch();
   
     const paper = useSelector((state)=>state.paper.datas);
@@ -20,7 +28,7 @@ const Beaute = () => {
            console.log("my data",paper)
     return (
         <div>
-         <Navbar/>
+         <Navbar submitHandler={submitHandler} />
             <div className="parent1" >
             <h1 className="fraze">Beauté</h1>
   
@@ -35,7 +43,7 @@ const Beaute = () => {
         <div className="espace">
 {
     paper
-    .filter((el) => el.catégorie === 'beauté')
+    .filter((el) => el.catégorie === 'beauté' && el.titre.toLowerCase().includes(keyword.toLowerCase()))
     .map((el, _id)=>(
 
         <div className="card-phyto">

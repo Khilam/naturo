@@ -29,7 +29,7 @@ body {
       margin-bottom: 25px;
     }
     .table-header {
-      background-color: #08924d;
+      background-color: #84c2a1;
       font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
@@ -150,7 +150,7 @@ body {
           
           
           .cardd:nth-child(1)  {
-            background-image: linear-gradient(45deg, #3503ad, #23bd68);
+            background-image: linear-gradient(45deg, #4b86c9, #23bd68);
           }
           
           .cardd:nth-child(2)  {
@@ -164,22 +164,26 @@ body {
         
       
           
-          p{
-            margin: 0;
-            margin-bottom: 16px;
+          .val{
+            margin-top: -70px;
+            margin-bottom: 56px !important;
             color: #fff;
             margin-left: 350px !important;
+            margin-right: 30px !important;
             font-size: larger;
+            width: 950px !important;
           }
           .hh2{
             color: #fff;
             font-size: large;
             margin-top: 250px;
+            width: 250px !important;
            
           }
           .navv-item{
             margin-right: 35px !important;
-            margin-left: 30px !important;
+            margin-left: 60px !important;
+            margin-top: 5px;
             color: #05563E !important;
             font-size:100px !important;
             font-family:Georgia, 'Times New Roman', Times, serif!important;

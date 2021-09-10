@@ -1,7 +1,7 @@
 import React from 'react'
 import maladies from '../../images/maladies.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import Modale from './pageMaladie'
 import '../../Page/phyto/phyto.css'
 
@@ -13,6 +13,13 @@ import Footer from '../../Shared/footer'
 import { getPaperAPI } from '../../Redux/Action/paperAction'
 // import './phyto.css'
 const Maladie = () => {
+
+    const [keyword, setKeyword] = useState('')
+
+    const submitHandler = (e) => {
+      setKeyword(e.target.value)
+      
+    } 
     const dispatch=useDispatch();
     // const history=useHistory();
     const paper = useSelector((state)=>state.paper.datas);
@@ -22,7 +29,7 @@ const Maladie = () => {
            console.log("my data",paper)
     return (
         <div>
-         <Navbar/>
+         <Navbar submitHandler={submitHandler}/>
             <div className="parent1" >
             <h1 className="fraze">Maladies</h1>
   
@@ -37,7 +44,7 @@ const Maladie = () => {
         <div className="espace"/>
 {
     paper
-    .filter((el) => el.catégorie === 'maladie')
+    .filter((el) => el.catégorie === 'maladie' && el.titre.toLowerCase().includes(keyword.toLowerCase()))
     .map((el, key)=>(
         <div  key={key}>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import phyto from '../../images/phyto.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import {useEffect} from 'react'
+import {useEffect,useState} from 'react'
 import Footer from '../../Shared/footer'
 import Navbar from '../../Shared/navbar'
 import { getPaperAPI } from '../../Redux/Action/paperAction'
@@ -10,6 +10,12 @@ import './phyto.css'
 
 
 const Phyto = () => {
+    const [keyword, setKeyword] = useState('')
+
+    const submitHandler = (e) => {
+      setKeyword(e.target.value)
+      
+    }
     const dispatch=useDispatch();
 
     const paper = useSelector((state)=>state.paper.datas);
@@ -19,7 +25,7 @@ const Phyto = () => {
            console.log("my data",paper)
     return (
         <div>
-         <Navbar/>
+         <Navbar submitHandler={submitHandler}/>
             <div className="parent1" >
             <h1 className="fraze">Phytothérapie</h1>
   
@@ -35,7 +41,7 @@ const Phyto = () => {
         <div className="espace"/>
 {
     paper
-    .filter((el) => el.catégorie === 'phyto')
+    .filter((el) => el.catégorie === 'phyto' && el.titre.toLowerCase().includes(keyword.toLowerCase()))
     .map((el,key)=>(
          <div  key={key}>
 

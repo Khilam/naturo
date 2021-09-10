@@ -6,13 +6,15 @@ import {FaShoppingCart} from 'react-icons/fa'
 
 import { Link } from 'react-router-dom'
 import './searchanimate.css'
-
+import { useState } from 'react'
 import "./navbar.css"
+import { userReducer } from '../Redux/Reducer/authReducer';
 
 
 
-function Navbar() {
+function Navbar({submitHandler}) {
  
+
 
  
   
@@ -48,7 +50,11 @@ function Navbar() {
 
                         <div className="icons">
                       
-                        <Link to="sign" className="nav-item nav-link"><BsPersonFill  /></Link>
+                        <Link to="sign" className="nav-item nav-link dropdown"><BsPersonFill  />
+                        
+                        
+                        
+                        </Link>
                         <Link to="/panier">
                 <a className="nav-item nav-link">
                 < FaShoppingCart /> 
@@ -60,7 +66,7 @@ function Navbar() {
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
         <div className="search-container">
-          <input type="text" name="search" placeholder="Search..." className="search-input" />
+          <input type="text" name="search" placeholder="Search..." className="search-input" onChange={submitHandler} />
           <a href="search" className="search-btn">
             <i className="fas fa-search" />      
           </a>

@@ -25,7 +25,21 @@ const OrderValidation = () => {
                 <img src="https://image.freepik.com/vecteurs-libre/femme-fleurs-printemps-dans-panier_113065-437.jpg" alt="" width={120} />
               </div>
               <h2 className="cardd__title">Bonjour {user.name} ! </h2>
-              <ExitToAppIcon className="navv-item nav-link" 
+           
+            
+             
+           
+             
+             
+            </div>
+           
+            <p className="val">Votre commande a ete passé par succès, vous serez contacté pour planifier la livraison sur votre numéro de téléphone {user.phone}</p>
+            <h2 className="hh2">Merci pour votre visite à bientôt</h2>
+
+         
+      
+          </li>
+          <ExitToAppIcon className="navv-item nav-link" 
         onClick={() => {
           dispatch(logout())
           history.push('/sign')
@@ -33,16 +47,6 @@ const OrderValidation = () => {
       >
        
       </ExitToAppIcon>
-            
-             
-           
-             
-             
-            </div>
-            <p>Votre commande a ete passé par succés, vous serez contacté pour planifier la livraison sur votre numéro de télephone {user.phone}</p>
-            <h2 className="hh2">Merci pour votre visite a bientot </h2>
-          </li>
-       
         </div>
         
         </div>

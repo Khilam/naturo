@@ -9,8 +9,9 @@ import treemen from './../images/treeman.jpg'
 import Navbar from '../Shared/navbar'
 import Footer from '../Shared/footer'
 import { useDispatch, useSelector } from 'react-redux'
-import  { useEffect } from 'react'
+import  { useEffect,useState } from 'react'
 import { getPaperAPI } from '../Redux/Action/paperAction'
+import { getProductAPI } from '../Redux/Action/productAction'
 import { Link } from 'react-router-dom'
 
 
@@ -22,18 +23,23 @@ function Home({ match }) {
     const keyword = match.params.keyword
     const dispatch = useDispatch()
 
+
+ 
+
     const productList = useSelector((state) => state.getPaperAPI)
-    const { titre, title, catégorie} = getPaperAPI
+    const { paper,  catégorie} = getPaperAPI
+    const { product} =getProductAPI
 
     useEffect(() => {
-        dispatch(getPaperAPI(keyword))
+        dispatch(getPaperAPI, getProductAPI(keyword))
       }, [dispatch, keyword])
+     
 
 console.log('keyword', keyword)
       
     return (
         <div>
-         <Navbar/>
+         <Navbar />
             <div className="parent" >
             <h1 className="fraze">LE CHEMAIN VERS UNE VIE EPANOUIE</h1>
   
@@ -115,7 +121,7 @@ Le but de ces consultations est de vous apporter une réponse globale à vos pro
 </div>
 <div className="paragraf2">
     <h6 className="hh6">Qu’est-ce qu’un naturopathe ?</h6>
-    <p>Le naturopathe est un éducateur de santé.  Il établit un bilan de vitalité personnalisé et vous permet de mieux vous connaître. Vous prendrez conscience de vos forces et de vos faiblesses, de votre niveau d’énergie vitale. Vous repartirez avec une meilleure connaissance de votre organisme. Ensemble, vous établirez un programme qui vous permettra d’optimiser votre forme : alimentation, habitudes de vie à mettre en place, conseils phytothérapie et aromathérapie. Le rôle du naturopathe est ainsi de vous rendre le plus informé possible et le plus autonome vis-à-vis de votre santé.</p>
+    <p className="nat">Le naturopathe est un éducateur de santé.  Il établit un bilan de vitalité personnalisé et vous permet de mieux vous connaître. Vous prendrez conscience de vos forces et de vos faiblesses, de votre niveau d’énergie vitale. Vous repartirez avec une meilleure connaissance de votre organisme. Ensemble, vous établirez un programme qui vous permettra d’optimiser votre forme : alimentation, habitudes de vie à mettre en place, conseils phytothérapie et aromathérapie. Le rôle du naturopathe est ainsi de vous rendre le plus informé possible et le plus autonome vis-à-vis de votre santé.</p>
 </div>
 </div>
  {/* <div className="contacter-nous">

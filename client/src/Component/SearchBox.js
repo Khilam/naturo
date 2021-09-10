@@ -1,24 +1,15 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 
-const SearchBox = ({ history }) => {
-  const [keyword, setKeyword] = useState('')
+const SearchBox = ({submitHandler}) => {
 
-  const submitHandler = (e) => {
-    e.preventDefault()
-    if (keyword.trim()) {
-      history.push(`/search/${keyword}`)
-    } else {
-      history.push('/search')
-    }
-  }
 
   return (
-    <Form onSubmit={submitHandler} inline>
+    <Form >
       <Form.Control
         type="text"
         name="q"
-        onChange={(e) => setKeyword(e.target.value)}
+        onChange={submitHandler}
         placeholder="Search ..."
         className="mr-sm-2 ml-sm-5"
       ></Form.Control>
