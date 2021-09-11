@@ -1,6 +1,6 @@
 import React from 'react'
 
-import apropos from './../images/apropos.jpg'
+import apropoppp from './../images/aproppp.jpg'
 import conceptnaturo from './../images/conceptsnatoro.jpg'
 import nousommes from './../images/nousommes.jpg'
 import Navbar from '../Shared/navbar'
@@ -15,7 +15,7 @@ function Apropos() {
             <h1 className="fraze">À propos</h1>
   
             <div >
-            <img  className="imagearpop" src={apropos} alt="fpage1"/>
+            <img  className="imagearpopp" src={apropoppp} alt="fpage1"/>
             </div>
             
             <div className="Rectang">

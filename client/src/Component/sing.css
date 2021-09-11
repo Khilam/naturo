@@ -10,6 +10,7 @@ body{
 	background-color: #fff;
 	overflow-x: hidden;
 }
+
 a {
 	cursor: pointer;
   transition: all 200ms linear;
@@ -50,6 +51,7 @@ p {
 .full-height{
   min-height: 100vh;
 }
+
 [type="checkbox"]:checked,
 [type="checkbox"]:not(:checked){
   position: absolute;

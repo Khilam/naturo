@@ -31,8 +31,9 @@ const Beaute = () => {
          <Navbar submitHandler={submitHandler} />
             <div className="parent1" >
             <h1 className="fraze">Beauté</h1>
-  <div>
             <div className="image-container"> 
+  <div>
+           
             <img  className="imagearpop" src={beauté} alt="fpage1"/>
             </div>
             </div>
@@ -45,11 +46,11 @@ const Beaute = () => {
 {
     paper
     .filter((el) => el.catégorie === 'beauté' && el.titre.toLowerCase().includes(keyword.toLowerCase()))
-    .map((el, _id)=>(
+    .map((el, key)=>(
 
-        // <div  key={key}>
+        <div  key={key}>
          
-        <div className="image-container"> 
+        {/* <div className="image-container">  */}
                <div className="card-phyto">
                 
                    <div className="phyto-title-parag">
@@ -58,10 +59,12 @@ const Beaute = () => {
                <Modale id={el._id} el={el} />
                
                </div>
+               
+               </div>
                <img className="img-phyto"
                src={el.image} alt="imgs"/>
-               </div>
                </div> 
+       
        
             
     ))

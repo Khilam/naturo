@@ -4,12 +4,21 @@
   justify-content: space-evenly;
   
 }
-.imagearpop{
-  width:622px;
-  height: 250px;
-  margin-top: 80px;
+ .imagearpop{
+  width:550px;
+  height: -50px !important;
+  margin-top: 60px !important;
+  /* margin-left: 200px !important; */
+  
+}
+
+
+
+.image-containerr{
+    display: flex;
  
 
+    justify-content: center !important;
 }
 .media {
     display: flex;

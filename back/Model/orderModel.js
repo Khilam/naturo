@@ -2,26 +2,39 @@ const mongoose = require('mongoose')
 
 const orderSchema = new mongoose.Schema(
   {
-    // user: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   required: true,
-    //   ref: 'Auth',
-    // },
+    userId: {
+      type: String,
+      required: true,
+    },
+    userName: {
+      type: String,
+      required: true,
+    },
+    userLastName: {
+      type: String,
+      required: true,
+    },
+    userPhone: {
+      type: String,
+      required: true,
+    },
+    userAdresse: {
+      type: String,
+      required: true,
+    },
+    userMail: {
+      type: String,
+      required: true,
+    },
 
     orderItems: [
       {
-        title:
-        { type: String },
-        qanty: 
-        { type: String},
-        imageUrl:
-         { type: String},
-        price: 
-        { type: String}, 
-        rating: 
-        { type: String}, 
-        description: 
-        { type: String}, 
+        title: { type: String },
+        qanty: { type: String },
+        imageUrl: { type: String },
+        price: { type: String },
+        rating: { type: String },
+        description: { type: String },
 
         // product: {
         //   type: mongoose.Schema.Types.ObjectId,
@@ -30,7 +43,6 @@ const orderSchema = new mongoose.Schema(
         // },
       },
     ],
-    
 
     // shippingAddress: {
     //   address: { type: String, required: true },

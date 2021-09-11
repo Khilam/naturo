@@ -51,7 +51,7 @@ const Maladie = () => {
        
         <div  key={key}>
          
- <div className="image-container"> 
+ {/* <div className="image-container">  */}
         <div className="card-phyto">
          
             <div className="phyto-title-parag">
@@ -60,14 +60,15 @@ const Maladie = () => {
         <Modale id={el._id} el={el} />
         
         </div>
+        
+        </div>
         <img className="img-phyto"
         src={el.image} alt="imgs"/>
-        </div>
         </div> 
 
      
       
-        </div>
+ 
        
     )
      ) 

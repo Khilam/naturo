@@ -37,7 +37,7 @@ const Boutique = () => {
         <h1 className="fraze">Boutique</h1>
 
         <div>
-          <div className="image-container"> 
+          <div className="image-containerr"> 
           <img  src={boutikPrincipal} alt="fpage1" />
         </div>
         </div>

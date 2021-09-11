@@ -1,12 +1,13 @@
 .image-container{
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .imagearpop{
-    width:622px;
-    /* height: 350px; */
-    margin-top: 80px;
+    width:550px;
+    /* margin-left: 380px !important; */
+    height: 350px;
+    /* margin-top: 80px; */
    
 
 }
