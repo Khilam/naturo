@@ -1,8 +1,13 @@
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
 .imagearpop{
     width:622px;
     height: 350px;
     margin-top: 80px;
-    margin-left: 350px;
+   
 
 }
 .Rectang{
@@ -95,4 +100,14 @@ border-bottom-color: rgba(68, 224, 178, 0.44);
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         
     }
+    /* @media only screen and (min-width:320){
+
+        div.Rectang {
+            display: none !important;
+        }
+        img.imagearpop{
+            display: none !important;
+
+        }
+    } */
   

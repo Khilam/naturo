@@ -26,18 +26,18 @@ function Navbar({submitHandler}) {
 
  <h1  className="bigTitle" >
       <FaPagelines /> NATUROPATHIE </h1> 
-      <div className="navbar navbar-expand ">
-            <div className="container-fluid">
+      <div className="container-fluid">
+            <div className="">
                 
   
                     
-                <div className="navbarr" >
+                <div  >
                 
 
                    
                    
                
-                    < div className="navbar-nav">
+                    < div className="nav-style">
                     <Link to="/" className="nav-item nav-link">Acceuil </Link>
                         <Link to="Phyto" className="nav-item nav-link active phyto">Phytothérapie</Link>
                         <Link to="Maladies" className="nav-item nav-link">Maladies</Link>
@@ -88,7 +88,7 @@ function Navbar({submitHandler}) {
            
 
        <div>
-       <h3 className="fraze2">Porte ouverte sur la santé</h3>
+       <h3 className="text-center py-5">Porte ouverte sur la santé</h3>
        </div>
       
   

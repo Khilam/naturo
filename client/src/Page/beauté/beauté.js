@@ -31,9 +31,10 @@ const Beaute = () => {
          <Navbar submitHandler={submitHandler} />
             <div className="parent1" >
             <h1 className="fraze">Beauté</h1>
-  
-            <div >
+  <div>
+            <div className="image-container"> 
             <img  className="imagearpop" src={beauté} alt="fpage1"/>
+            </div>
             </div>
             
             <div className="Rectang">

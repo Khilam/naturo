@@ -10,6 +10,7 @@ import { loadCurrentItem, addToCart } from '../../Redux/Action/orderAction'
 import { connect } from 'react-redux'
 
 
+
 function Modale ({id,el}) {
 
 

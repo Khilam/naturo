@@ -4,12 +4,18 @@
   justify-content: space-evenly;
   
 }
+.imagearpop{
+  width:622px;
+  height: 250px;
+  margin-top: 80px;
+ 
 
+}
 .media {
     display: flex;
     flex-direction: column;
-    width: 220px;
-    height: 350px;
+    width: 240px;
+    height: 370px;
     padding: 5px;
     margin-top: 20px;
     margin-left: 20px;
@@ -44,11 +50,7 @@
    
     align-self: auto;
   }
-   .fav{
-     color: red;
-     margin-top: 0px;
-     
-    }
+  
     
 
     /* *********** Rating ************/
@@ -94,7 +96,7 @@
       font-family: fantasy;
     }
     .iconPanier{
-      margin-right: -150px;
+      margin-right: -180px;
       color: #076040;
     }
     .iconPanier:hover{
@@ -109,7 +111,7 @@
       padding-bottom: 4px;
     }
   
-  @media (max-width: 550px) {
+  /* @media (max-width: 375px) {
     .media {
       width: 46%;
       height: 98%;
@@ -117,9 +119,14 @@
     .poster{
       width: 100%;
     }
+    .iconPanier{
+      margin-right: -100px;
+      margin-top: -1px !important;
+      color: #076040;
+    }
     
 
-  }
+  } */
   
   
  

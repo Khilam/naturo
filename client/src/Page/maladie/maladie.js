@@ -34,7 +34,9 @@ const Maladie = () => {
             <h1 className="fraze">Maladies</h1>
   
             <div >
+            <div className="image-container"> 
             <img  className="imagearpop" src={maladies} alt="fpage1"/>
+            </div>
             </div>
             
             <div className="Rectang">
@@ -47,7 +49,7 @@ const Maladie = () => {
     .filter((el) => el.catégorie === 'maladie' && el.titre.toLowerCase().includes(keyword.toLowerCase()))
     .map((el, key)=>(
         <div  key={key}>
-
+ <div className="image-container"> 
         <div className="card-phyto">
             <div className="phyto-title-parag">
         <h6 className="title-phyto">{el.titre}</h6>
@@ -61,6 +63,7 @@ const Maladie = () => {
 
 
      
+        </div>
         </div> 
     )
      ) 

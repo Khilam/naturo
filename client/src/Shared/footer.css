@@ -1,29 +1,21 @@
 .footer{
     background-color:  #05563E;
     font-size:small;
-    margin-top: -150px !important;
-    margin-bottom: -50px !important; 
-   margin-right: -250px !important;
-    margin-left: 840px;
     text-align: center;
- 
-  width: 450px;
-  
     color: #fff;
-   
     padding-bottom: 7px;
     font-family: 'Courier New', Courier, monospace;
    
+}
+
+.footer-width{
+    width: 100% !important;
 }
 .footer-div{
     background-color:  #05563E;
     font-size:x-small;
     margin-top: 60px;
     padding-top: 7px;
-
-    margin-right: -400px !important;
-   
-   
 }
 
 /* .pre-footer{
@@ -69,8 +61,7 @@
 }
 .footer-titre{
     margin-top: -25px;
-    margin-bottom: 100px !important;
-    margin-left: -550px;
+    text-align: center;
     font-size: x-large;
     color: #fff;
     font-family:'Times New Roman', Times, serif;

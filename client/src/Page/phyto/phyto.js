@@ -30,7 +30,9 @@ const Phyto = () => {
             <h1 className="fraze">Phytothérapie</h1>
   
             <div  className="all">
+            <div className="image-container"> 
             <img  className="imagearpop" src={phyto} alt="fpage1"/>
+            </div>
             </div>
             
             <div className="Rectang">

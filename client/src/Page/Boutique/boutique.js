@@ -14,7 +14,7 @@ import Rating from '../../Component/Rating'
 import { connect } from 'react-redux'
 import { loadCurrentItem, addToCart } from '../../Redux/Action/orderAction'
 
-const Boutique = ({ boutique }) => {
+const Boutique = () => {
 
   const [keyword, setKeyword] = useState('')
 
@@ -37,15 +37,17 @@ const Boutique = ({ boutique }) => {
         <h1 className="fraze">Boutique</h1>
 
         <div>
-          <img className="imagearpop" src={boutikPrincipal} alt="fpage1" />
+          <div className="image-container"> 
+          <img  src={boutikPrincipal} alt="fpage1" />
         </div>
-
+        </div>
         <div className="Rectang"></div>
       </div>
       <div className="espace" />
       <div className="trending">
         {product
-       .filter((el) => el.title.toLowerCase().includes(keyword.toLowerCase()))
+      .filter((el) =>el.title.toLowerCase().includes(keyword.toLowerCase()))
+   
         .map((el, key) => (
           <div key={key}>
             <div className="media">
@@ -57,27 +59,10 @@ const Boutique = ({ boutique }) => {
                 
                 <h6 className="title">Prix: {el.price} DT</h6>
                 <Rating className="Rating-boutik" rating={el.rating} />
-                {/* <ListGroup.Item>
-                  <Row> */}
-                {/* <Col>Qty</Col>
-                <Col>
-                  <Form.Control
-                    as="select"
-                    value={qanty}
-                    onChange={(e) => setQanty(e.target.value)}
-                  >
-                    {[...Array(el.qty).keys()].map((x) => (
-                      <option key={x + 1} value={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </Form.Control>
-                </Col> */}
-                {/* </Row>
-                </ListGroup.Item> */}
+               
                 <AddShoppingCartIcon className="iconPanier"
                   onClick={() => dispatch(addToCart(el._id, qanty))}
-                  //   className={`${styles.buttons__btn} ${styles.buttons__add}`}
+              
                 >
                   Add To Cart
                 </AddShoppingCartIcon>
