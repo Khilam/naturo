@@ -47,22 +47,24 @@ const Phyto = () => {
     .map((el,key)=>(
          <div  key={key}>
 
+<div className="image-container"> 
         <div className="card-phyto">
+         
             <div className="phyto-title-parag">
         <h6 className="title-phyto">{el.titre}</h6>
         <p className="parag-phyto">{el.contenu.substring(0, 300)}...</p>
         <Modale id={el._id} el={el} />
+        
         </div>
         <img className="img-phyto"
         src={el.image} alt="imgs"/>
         </div>
-       
-    
+        </div> 
+
+     
       
-        
-    
-         
-       </div> 
+        </div>
+       
     )
      ) 
      

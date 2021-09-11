@@ -1,18 +1,22 @@
 .card-phyto{
-    display: flex;
-    margin-top: 30px;
+          display: flex;
+        flex-direction: column;
     background-color: transparent;
     border-radius: 0px;
     border-color: #328B70 !important;
     border-width: 10px ;
     border: solid;
- margin-left: 300px !important;
- margin-right: 200px !important;
+ /* margin-left: 300px !important; */
+ /* margin-right: 200px !important; */
  margin-bottom: 100px;
  width: 800px !important;
- height: 400px;
+ height: 400px !important;
 
 
+}
+.image-container{
+    display: flex;
+    justify-content: center;
 }
 .title-phyto{
     font-family:'Times New Roman', Times, serif;
@@ -29,10 +33,10 @@
 .parag-phyto{
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 30px;
-    margin-bottom: 10px !important;
-    margin-top: 60px !important;
-    margin-right: -70px !important;
+    margin-left: 330px !important;
+    /* margin-bottom: 10px !important;
+    margin-top: 60px !important;*/
+    /* margin-right: -70px !important;  */
     text-align: start;
     font-size:15px;
     width: 390px !important;
@@ -43,12 +47,13 @@
 } */
 .img-phyto{
     width: 350px;
-    height: 300px;
+    position: relative;
+    height: 300px !important;
     border-radius: 0px;
-    margin-right:450px !important;
-    margin-top: 150px !important;
-    margin-bottom: 40px !important;
-    margin-left: -800px !important;
+    /* margin-right:450px !important; */
+    margin-top: -160px !important;
+    /* margin-bottom: 40px !important; */
+    margin-left: -80px !important;
     box-shadow: 10px 10px rgba(0,0,0,.15);
 
 }
@@ -75,68 +80,22 @@
     /* margin-top: 80px; */
    
     margin-left: 300px !important;
-    margin-right: -350px !important;
+    margin-right: -300px !important;
     margin-top: 2%;
 }
 /*************************************image ************************************/
 
- @media only screen and (max-width:1024){
-.img-phyto{
-    width:100px;
-    margin-left:250px
-}
-.card-phyto{
-    width: 70%;
-    margin-left: 100px;
-}
-.parag-phyto{
-    width: 50%;
-}
-} 
-@media only screen and (min-width:768){
-    .card-phyto {
-        width: 36%;
-        margin-left:0px;
-      } 
-}
-@media only screen and (min-width: 450px) {
-    .card-phyto {
-      width: 46%;
-      /* margin-left: -60px !important ; */
-    }
-    .imagearpop{
-        width: 46%;
-        
-    }
-    .Rectang{
-        width: 100%;
-     
-    }
+ @media only screen and (max-width:425){
+    
+     .img-phyto{
+         display: none !important;
+     }
+     .card-phyto{
+         width: 36% !important;
+     }
+     .image-container{
+         width: 10% !important;
+     }
+
+    } 
   
-    .espace{
-        width: 40%;
-    }
-    .img-phyto{
-        
-        margin-left:-20px
-    }
-    .parag-phyto{
-        width:250px;
-        margin-left: 400px;
-    }
-.Button{
-    margin-left: 300px !important;
-    margin-right: 300px !important;
-    margin-top: -10px;
-}
-
-    /* .card-phyto{
-
-    }
-    .title-phyto{
-
-    }
-    .parag-phyto{
-
-    } */
-  }
