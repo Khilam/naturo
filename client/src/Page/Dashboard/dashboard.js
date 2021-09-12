@@ -69,7 +69,7 @@ const Dashboard = () => {
         <Tab.Pane calssName=" firstt" eventKey="second">
         <PapresDashboard/>
         </Tab.Pane>
-        <Tab.Pane eventKey="second">
+        <Tab.Pane eventKey="third">
         <OrdersDashboard />
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">

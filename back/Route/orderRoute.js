@@ -10,4 +10,5 @@ router.get('/getOrderById/:id', order.getOrderById)
 // get All orders
 router.get('/get', order.getOrders)
 router.put('/:id', order.updateOrder)
+router.delete('/:id', order.deleteOrder)
 module.exports = router

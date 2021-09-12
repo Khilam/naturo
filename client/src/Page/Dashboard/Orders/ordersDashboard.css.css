@@ -10,6 +10,9 @@
     text-align: center;
     justify-content: center;
 }
+.comm{
+    color: black !important;
+}
 .dash-titr{
   width: 250px;
     font-family: Georgia, 'Times New Roman', Times, serif;

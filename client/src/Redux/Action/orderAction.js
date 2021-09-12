@@ -101,9 +101,9 @@ export const saveOrder = (orderItems, totalPrice,history) => async (dispatch) =>
 
 
 
-export const addOrdersApi=( id, orderItems, userName, userLastName,userPhone, userAdresse,userMail, userId, totalPrice )=> async (dispatch) =>{
+export const addOrdersApi=( _id, orderItems, userName, userLastName,userPhone, userAdresse,userMail, userId, totalPrice , title)=> async (dispatch) =>{
     try{
-        const res=await addOrder (id, orderItems, userName, userLastName,userPhone, userAdresse,userMail, userId, totalPrice);
+        const res=await addOrder (_id, orderItems, userName, userLastName,userPhone, userAdresse,userMail, userId, totalPrice, title);
         dispatch ({
             type:POST_ORDER,
             payload:res.data
@@ -130,7 +130,7 @@ catch (error) {
 
 export const deleteOrder = (id)=> async (dispatch) => {
     try {
-      await deleteOrder (id);
+      await deleteOrders (id);
       dispatch({
         type:DELETE_ORDER,
         payload:id
@@ -142,9 +142,9 @@ export const deleteOrder = (id)=> async (dispatch) => {
     }
   };
 // update Menu
-export const updateOrder = ( userName,userLastName,userPhone, userAdresse,userMail, id, totalPrice, orderItems ) => async dispatch => {
+export const updateOrder = ( userName,userLastName,userPhone, userAdresse,userMail, _id, totalPrice, orderItems, userId , title) => async dispatch => {
     try {
-      const res = await axios.put(`http://localhost:4005/app/order/${id}`,{ userName, userLastName,userPhone, userAdresse,userMail, id, totalPrice,orderItems}) 
+      const res = await axios.put(`http://localhost:4005/app/order/${_id}`,{ userName, userLastName,userPhone, userAdresse,userMail,_id, totalPrice,orderItems, userId, title}) 
        
       dispatch({
         type: PUT_ORDER, 

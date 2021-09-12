@@ -49,6 +49,14 @@ module.exports = {
 }
 catch(error){console.error(error.message)}
 },
+deleteOrder: async (req, res)=>{
+  try{
+      const order = await Order.findByIdAndDelete(req.params.id)
+      res.json(order)
+  }
+  catch(error){console.error(error.message)}
+
+},
 getOrderDetail : async (req, res) => {
     try {
       const order = await Order.findById(req.params.id);

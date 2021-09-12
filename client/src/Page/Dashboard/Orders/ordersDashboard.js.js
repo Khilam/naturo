@@ -4,11 +4,13 @@ import { useEffect } from 'react'
 import {LinkContainer} from 'react-router-bootstrap'
 import { Table, Button} from 'react-bootstrap'
 import DeleteIcon from '@material-ui/icons/Delete';
+import UpdateOrder from './updateOrder'
 // import EditIcon from '@material-ui/icons/Edit';
 import '../papersDashboard/papersDashboard.css'
 
 import { deleteOrder, getOrderAPI } from '../../../Redux/Action/orderAction';
 import { IoMdArrowRoundForward } from 'react-icons/io'
+import { DialogTitle } from '@material-ui/core'
 // import AddPaper from './addPaper'
 // import UpdatePaper from './update'
 
@@ -17,7 +19,7 @@ const OrdersDashboard = ()=>{
   const mouna = useSelector((state) => state.order.datas)
   const dispatch = useDispatch()
   
-  console.log(IoMdArrowRoundForward)
+  console.log(mouna)
  
   useEffect(() => {
     dispatch(getOrderAPI())
@@ -27,13 +29,13 @@ const OrdersDashboard = ()=>{
        //Delete Paper
 
  
-  //  const deleteOrder =(id)=>{
-  //   dispatch (deleteOrder(id) )
-  //   console.log(deleteOrder(id))
-  // }
+   const deleteOrderr =(id)=>{
+    dispatch (deleteOrder(id) )
+    console.log(deleteOrder(id))
+  }
   return (
     <div>
-       {/* <AddPaper/> */}
+      
         <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr className="dash-titr">
@@ -44,34 +46,39 @@ const OrdersDashboard = ()=>{
                 <th className="dash-titr-img">Phone</th>
                 <th className="dash-titr-img">Mail</th>
                 <th className="dash-titr-op"> Total</th>
+                <th className="dash-titr-op"> Options</th>
               </tr>
             </thead>
             <tbody>
            
               {mouna.map((order) => (
-                <tr key={mouna._id}>
-                  <td className="paper-dash">{mouna._id}</td>
-                  {/* <td className="paper-dash">{order.orderItems.title}</td> */}
-                  <td className="paper-dash">{mouna.userName}{order.userLastName}</td>
-                  <td className="paper-dash">{mouna.userAdresse}</td>
-                  <td className="paper-dash">{mouna.totalPrice}</td>
-                  <td className="paper-dash">{mouna.userPhone}</td>
-                  <td className="paper-dash">{mouna.userMail}</td>
-                  <td>
+                <tr key={order._id}>
+                  <td className="paper-dash">{order._id}</td>
+                  <td className="paper-dash">{order.orderItems.map((x)=>(
+                   <p className="comm" >{x.title}</p>))}
+                 </td>  
+                  <td className="paper-dash">{order.userName}</td>
+                  <td className="paper-dash">{order.userAdresse}</td>
+                  <td className="paper-dash">{order.userPhone}</td>
+                  <td className="paper-dash">{order.userMail}</td>
+                  <td className="paper-dash">{order.totalPrice}</td>
+              
+                 
+                  <td> 
                   
-                  {/* <Button 
+                    <Button 
                       variant="danger"
                       className="dash-paper-editt">
-                      <UpdatePaper className="dash-paper-editt" id={paper._id}  el={paper}/>
+                      <UpdateOrder className="dash-paper-editt" id={order._id}  el={order}/>
                       
-                      </Button> */}
-                    {/* <Button
+                      </Button> 
+                    <Button
                       variant="danger"
                       className="dash-paper-delete"
-                      onClick={() => deleteOrder(order._id)}
+                      onClick={() => deleteOrderr(order._id)}
                     >
                       < DeleteIcon/>
-                    </Button> */}
+                    </Button> 
                   </td>
                 </tr>
               ))}
