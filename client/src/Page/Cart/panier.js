@@ -44,8 +44,8 @@ const Cart = ({history}) => {
           <li class="table-header">
             <div class="col col-1">Produit</div>
             <div class="col col-3">Prix</div>
-            <div class="col col-4">Image</div>
-            <div class="col col-1">Quantité</div>
+            <div class="col col-1">Image</div>
+            <div class="col col-3">Quantité</div>
             <div class="col col-1">Somme</div>
             {/* <div class="col col-2"></div> */}
           </li>

@@ -49,7 +49,7 @@ const CartItems = ({ item }) => {
             }}
           />
   </td>
-          <td className="col col-1">{item.price * item.qanty}
+          <td className="col col-3">{item.price * item.qanty}
        </td>
        <td>
             <Button className="">
