@@ -44,10 +44,10 @@ const Cart = ({history}) => {
           <li class="table-header">
             <div class="col col-3">Produit</div>
             <div class="col col-1">Prix</div>
-            <div class="col col-4">Image</div>
+            <div class="col col-3">Image</div>
             <div class="col col-1">Quantité</div>
             <div class="col col-3">Somme</div>
-            <div class="col col-1"></div>
+            <div class="col col-2"></div>
           </li>
 
           <tbody className="panier">

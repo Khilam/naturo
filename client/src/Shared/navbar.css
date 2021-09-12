@@ -22,7 +22,7 @@
   margin-right: 60px;
 }
 .navbar-nav {
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 }
 .navbar.nav-sticky {
@@ -50,7 +50,7 @@
 }
 
 .fraze {
-  margin-top: 40px !important;
+  margin-top: 60px !important;
   color: #84c2a1;
   text-align: center;
   font-family: "Times New Roman", Times, serif !important;

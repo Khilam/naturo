@@ -17,7 +17,7 @@ export const registerUser = (user, history) => async (dispatch) => {
 	try {
 		const result = await axios.post('app/auth/register', user); //{newUser+msg+token}
 		dispatch({ type: REGISTER_USER, payload: result.data });
-	     history.push('/panier');
+	     history.push('/');
 	} catch (error) {
 			const { errors, msg } = error.response.data;
 			if (Array.isArray(errors)) {
