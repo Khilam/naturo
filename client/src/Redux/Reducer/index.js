@@ -3,7 +3,7 @@ import { userReducer } from './authReducer';
 
 import { paperReducer } from './paperReducer';
 import { productReducer } from './productReducer';
-import {cartReducer} from './orderReducer'
+import {cartReducer, OrderReducer} from './orderReducer'
 
 
 
@@ -12,6 +12,7 @@ export const rootReducer = combineReducers({
 	paper: paperReducer,
 	product: productReducer,
 	cart: cartReducer,
+	order: OrderReducer
 	
 	
 

@@ -41,6 +41,24 @@ module.exports = {
       throw new Error('Order not found')
     }
   },
+  updateOrder: async (req, res)=>{
+    try{
+        const order =await Order.findByIdAndUpdate(req.params.id, req.body,        
+     {new :true})
+     res.json(order)
+}
+catch(error){console.error(error.message)}
+},
+getOrderDetail : async (req, res) => {
+    try {
+      const order = await Order.findById(req.params.id);
+  
+      res.json(order);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Server Error" });
+    }
+},
 
   // @desc    Get all orders
   // @route   GET /api/orders

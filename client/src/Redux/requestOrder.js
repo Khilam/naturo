@@ -4,24 +4,34 @@ const Api = axios.create({ baseURL: 'http://localhost:4005/app/order' })
 
 // //addOrder
 function addOrder(orderItems, totalPrice) {
-  return Api.post('/add', { orderItems, totalPrice })
+  const token = localStorage.getItem('token')
+  return Api.post(
+    '/add',
+    { orderItems, totalPrice },
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: token,
+      },
+    },
+  )
 }
 
-//   //getOrder
-//   function getOrders() {
-//     return Api.get("/get");
-//   }
+  //getOrder
+  function getAllOrders() {
+    return Api.get("/get");
+  }
 
-// //deleteOrder
-// function deleteOrder(id) {
-//   return Api.delete(`/${id}`);
-// }
+//deleteOrder
+function deleteOrders(id) {
+  return Api.delete(`/${id}`);
+}
 
-// //update Order
+//update Order
 
-// function updateOrder(id) {
-//   return Api.put(`/${id}`);
-// }
+function updateOrders(id) {
+  return Api.put(`/${id}`);
+}
 
-export { addOrder }
-export default { addOrder }
+export {addOrder, getAllOrders, deleteOrders,updateOrders} 
+export default {addOrder,getAllOrders, deleteOrders,updateOrders}

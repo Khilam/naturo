@@ -8,5 +8,6 @@ router.post('/add', isAuth(), order.addOrderItems)
 // get order byId
 router.get('/getOrderById/:id', order.getOrderById)
 // get All orders
-router.get('/getOrders', order.getOrders)
+router.get('/get', order.getOrders)
+router.put('/:id', order.updateOrder)
 module.exports = router

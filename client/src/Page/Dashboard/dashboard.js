@@ -10,6 +10,7 @@ import ListIcon from '@material-ui/icons/List';
 import './dashboard.css'
 import PapresDashboard from './papersDashboard/papersDashboard'
 import ProductsDashboard from './product/productDashboard'
+import OrdersDashboard from './Orders/ordersDashboard.js'
 
 
 
@@ -43,7 +44,7 @@ const Dashboard = () => {
           <Nav.Link  calssName="firstt" eventKey="second"><ListIcon/>Liste de papers </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link calssName="third" eventKey="third"><ListIcon/>Liste des utilisateurs</Nav.Link>
+          <Nav.Link calssName="third" eventKey="third"><ListIcon/>Liste des commandes</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link calssName="fourth" eventKey="fourth"><ListIcon/>Liste des produits</Nav.Link>
@@ -69,7 +70,7 @@ const Dashboard = () => {
         <PapresDashboard/>
         </Tab.Pane>
         <Tab.Pane eventKey="second">
-        {/* <Sonnet /> */}
+        <OrdersDashboard />
         </Tab.Pane>
         <Tab.Pane eventKey="fourth">
          

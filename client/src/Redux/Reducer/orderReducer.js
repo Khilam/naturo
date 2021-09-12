@@ -1,4 +1,5 @@
-import * as actionTypes from '../Const/orderConst'
+import {POST_ORDER,GET_ORDER, DELETE_ORDER, PUT_ORDER} from "../Const/orderConst"
+import * as actionTypes from "../Const/orderConst"
 
 // const initialState = {
 //   datas: [],
@@ -73,3 +74,51 @@ export const cartReducer = (
         return state
     }
   }
+
+
+
+const initialState={
+  datas : [],
+  loading:true
+} 
+
+ export const OrderReducer = ( state = { datas: [] }, action) => {
+  const { type, payload } = action;
+  switch (type){
+    case GET_ORDER:
+      
+      return {
+        ...state,
+        datas: payload,
+        loading: false
+      };
+
+    case POST_ORDER:
+     return {
+      ...state,
+      datas: [...state.datas, payload]
+
+     
+    }
+    case DELETE_ORDER:
+     return {
+       ...state,
+       datas: state.datas.filter(
+         data => data._id !== payload
+       ),
+       loading: false
+     };
+     case PUT_ORDER:
+       return {
+         ...state,
+         datas: state.datas.map(data =>
+           data._id === payload._id ? payload : data
+         )
+       };
+ }
+  return state
+};
+  
+  export const removeOrderDetails = () => (dispatch) => {
+    dispatch({ type: actionTypes.GET_ORDER_DETAILS_RESET });
+  };

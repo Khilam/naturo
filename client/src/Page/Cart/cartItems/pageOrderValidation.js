@@ -33,7 +33,7 @@ const OrderValidation = () => {
              
             </div>
            
-            <p className="val">Votre commande a ete passé par succès, vous serez contacté pour planifier la livraison sur votre numéro de téléphone {user.phone}</p>
+            <p className="val">Votre commande a été passé par succès, vous serez contacté pour planifier la livraison sur votre numéro de téléphone {user.phone}</p>
             <h2 className="hh2">Merci pour votre visite à bientôt</h2>
 
          
@@ -58,22 +58,3 @@ const OrderValidation = () => {
     )}
 
 export default OrderValidation
-
-
-
-
-
- //         <div>
-//             <Navbar/>
-
-       
-       
-
-//             <h1 className="orderValidation">Bonjour {user.name}</h1>
-//             <div className="validation">
-//             <h3 >Votre commande a ete passé par succés, vous serez contacté pour planifier la livraison sur votre numéro de télephone {user.phone}</h3>
-//             </div>
-//             <h3 className="validationn"> Merci pour votre visite </h3>
-
-// </div> 
-        
