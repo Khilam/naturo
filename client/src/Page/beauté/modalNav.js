@@ -18,6 +18,9 @@ function ModalNAv() {
         <div className="container-fluid">
           <div className="collapse navbar-collapse  " id="navbarCollapse">
             <div className="navbar-nav  ml-auto">
+            <Link to="/" className="nav-item nav-link">
+                Acceuil{" "}
+              </Link>
               <Link to="Phyto" className="nav-item nav-link active phyto">
                 Phytothérapie
               </Link>
@@ -33,9 +36,7 @@ function ModalNAv() {
               <Link to="apropos" className="nav-item nav-link">
                 À propos{" "}
               </Link>
-              <Link to="/" className="nav-item nav-link">
-                Acceuil{" "}
-              </Link>
+             
               <Link to="sign" className="nav-item nav-link">
                 <BsPersonFill />
               </Link>
