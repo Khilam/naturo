@@ -49,10 +49,10 @@ const CartItems = ({ item }) => {
             }}
           />
   </td>
-          <td className="col col-2">{item.price * item.qanty}
+          <td className="col col-1">{item.price * item.qanty}
        </td>
        <td>
-            <Button className="col col-2">
+            <Button className="">
               <DeleteIcon
                 onClick={() => dispatch(removeFromCart(item._id))}
                 className="deletoneitem"

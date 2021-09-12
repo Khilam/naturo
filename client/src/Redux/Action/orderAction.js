@@ -17,8 +17,8 @@ import axios from 'axios'
 
 
 
-export const addToCart = (id, qanty) => async (dispatch) => {
-  const { data } = await axios.get(`http://localhost:4005/app/product/${id}`)
+export const addToCart = (_id, qanty) => async (dispatch) => {
+  const { data } = await axios.get(`http://localhost:4005/app/product/${_id}`)
   // console.log(data)
   try {
     dispatch({
@@ -29,7 +29,7 @@ export const addToCart = (id, qanty) => async (dispatch) => {
         price: data.price,
         rating: data.rating,
         title: data.title,
-        id: data.id,
+        _id: data._id,
         qanty: 1,
       },
     })
