@@ -57,7 +57,7 @@ const OrdersDashboard = ()=>{
                   <td className="paper-dash">{order.orderItems.map((x)=>(
                    <p className="comm" >{x.title}</p>))}
                  </td>  
-                  <td className="paper-dash">{order.userName}</td>
+                  <td className="paper-dash">{order.userName} {order.userLastName}</td>
                   <td className="paper-dash">{order.userAdresse}</td>
                   <td className="paper-dash">{order.userPhone}</td>
                   <td className="paper-dash">{order.userMail}</td>
@@ -69,7 +69,7 @@ const OrdersDashboard = ()=>{
                     <Button 
                       variant="danger"
                       className="dash-paper-editt">
-                      <UpdateOrder className="dash-paper-editt" id={order._id}  el={order}/>
+                      {/* <UpdateOrder className="dash-paper-editt" id={order._id}  el={order}/> */}
                       
                       </Button> 
                     <Button

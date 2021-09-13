@@ -33,7 +33,7 @@ const OrderValidation = () => {
              
             </div>
            
-            <p className="val">Votre commande a été passé par succès, vous serez contacté pour planifier la livraison sur votre numéro de téléphone {user.phone}</p>
+            <p className="val">Votre commande a été passé avec succès, vous serez contacté pour planifier la livraison sur votre numéro de téléphone {user.phone}</p>
             <h2 className="hh2">Merci pour votre visite à bientôt</h2>
 
          

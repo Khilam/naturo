@@ -41,13 +41,13 @@ const Dashboard = () => {
     
         </Nav.Item>
         <Nav.Item >
-          <Nav.Link  calssName="firstt" eventKey="second"><ListIcon/>Liste de papers </Nav.Link>
+          <Nav.Link  calssName="firstt" eventKey="second"><ListIcon/>Papers </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link calssName="third" eventKey="third"><ListIcon/>Liste des commandes</Nav.Link>
+          <Nav.Link calssName="third" eventKey="third"><ListIcon/> Commandes</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link calssName="fourth" eventKey="fourth"><ListIcon/>Liste des produits</Nav.Link>
+          <Nav.Link calssName="fourth" eventKey="fourth"><ListIcon/>Produits</Nav.Link>
         </Nav.Item>
         <Nav.Item>
         <button className="bouton-dash"
