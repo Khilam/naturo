@@ -82,7 +82,7 @@ const Signup = () => {
 										<i className="input-icon uil uil-user" />
 									  </div>
 									  <div className="form-group">
-										<input type="text" name="logphone" className="form-style" placeholder="Your Phone Number" id="logphone" autoComplete="off" onChange={(e) => setPhone(e.target.value)}/>
+										<input type="tel" name="logphone" className="form-style" placeholder="Your Phone Number" id="logphone" autoComplete="off" onChange={(e) => setPhone(e.target.value)}/>
 										<i className="input-icon uil uil-user" />
 									  </div>
 									  <div className="form-group">

@@ -33,7 +33,7 @@ function Home({ match }) {
     <div>
       <Navbar />
       <div className="parent">
-        <h1>LE CHEMAIN VERS UNE VIE EPANOUIE</h1>
+        <h1>LE CHEMIN VERS UNE VIE EPANOUIE</h1>
 
         <div className="image-container">
           <img src={acceuil} alt="fpage1" />

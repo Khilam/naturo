@@ -64,7 +64,7 @@ const UpdateProduct = ({el,id}) => {
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Prix</Form.Label>
-<Form.Control type="text" placeholder="enter price"  name="price"  defaultValue={el.price}  onChange={handleChange} />
+<Form.Control type="number" placeholder="enter price"  name="price"  defaultValue={el.price}  onChange={handleChange} />
 </Form.Group>
 
 <Form.Group controlId="formBasicPassword">
@@ -74,7 +74,7 @@ const UpdateProduct = ({el,id}) => {
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Rating</Form.Label>
-<Form.Control type="text" placeholder="enter image"  name='rating' onChange={handleChange}/>
+<Form.Control type="number" placeholder="enter rating"  name='rating' onChange={handleChange}/>
 </Form.Group>
 
 <Button className="ms-3  mt-3" variant="secondary" onClick={handleClose}>  

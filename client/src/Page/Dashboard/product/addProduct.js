@@ -60,18 +60,18 @@ setShow(false)
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Prix</Form.Label>
-<Form.Control type="text" placeholder="enter your advice"  name='price' onChange={hanleChange}   />
+<Form.Control type="number" placeholder="enter your advice"  name='price' onChange={hanleChange}   />
 </Form.Group>
 
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Conseils</Form.Label>
-<Form.Control type="text" placeholder="enter prix"  name='conseils' onChange={hanleChange}   />
+<Form.Control type="text" placeholder="enter conseils"  name='conseils' onChange={hanleChange}   />
 </Form.Group>
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Rating</Form.Label>
-<Form.Control type="text" placeholder="enter image"  name='rating' onChange={hanleChange}   />
+<Form.Control type="number" placeholder="enter rating"  name='rating' onChange={hanleChange}   />
 </Form.Group>
 
 <Button className="ms-3  mt-3" variant="secondary" onClick={handleClose}>  
