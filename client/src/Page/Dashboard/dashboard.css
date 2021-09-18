@@ -2,9 +2,9 @@
     margin-top: 0px;
     position:fixed; 
     background-color: #84c2a1;
-    /* opacity: 90%; */
+     opacity: 90%; 
     height: 635px;
-    margin-left: 1090px !important;
+    margin-left: 1190px !important;
 }
 .titre-dash{
     font-size :14px;
@@ -15,23 +15,31 @@
 }
 
 .bouton-dash{
-    margin-top: 280px !important;
-    background-color: #05563E;
-    width: 150px;
-    height: 50px;
-    color: #fff;
-    border-radius: 10px;
+    margin-top: 250px !important;
+  
+         margin-left:20px !important;
+            color: #05563E !important;
+            font-size:50px !important;
+            font-family:Georgia, 'Times New Roman', Times, serif!important;
+            justify-content: space-evenly;
+            cursor: pointer;
 
 }
 .flex-column{
   text-align: start;
   color: rgb(206, 165, 165) !important;
-  
+  margin-left: -15px !important;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 30px;
+  font-size: 1px !important;
   /* align-content: space-between; */
   
 }
+
+ .firstt{
+    font-size: 1px !important;
+    color: #05563E !important;
+} 
 /*************** first page****/
 .welcom-dash{
     color: black;

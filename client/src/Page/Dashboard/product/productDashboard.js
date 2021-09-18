@@ -8,6 +8,7 @@ import AddProduct from './addProduct'
 import UpdateProduct from './updateProduct'
 import '../papersDashboard/papersDashboard.css'
 
+
 const ProductsDashboard = ()=>{
 
   const product = useSelector((state) => state.product.datas)
@@ -38,7 +39,7 @@ const ProductsDashboard = ()=>{
                 <th className="dash-titr-cont">Déscription</th>
                 <th className="dash-titr-cont">Conseils</th>
                 <th className="dash-titr-catégo">Prix</th>
-                <th className="dash-titr-img">Rating</th>
+                <th className="dash-titr-catégo">Rating</th>
                 <th className="dash-titr-img">Image</th>
               
                 <th className="dash-titr-op"> Options</th>

@@ -13,8 +13,8 @@ const AddProduct = () => {
 
 
 
-const [input,setInput]=useState({title:"",description:"", imageUrl:"" ,price:"", conseils
-:"", rating:""})
+const [input,setInput]=useState({title:"",description:"",price:"", conseils
+:"", rating:"",  imageUrl:"" })
 
 const hanleChange=(e)=>{
     const {name,value}=e.target
@@ -25,7 +25,7 @@ const hanleChange=(e)=>{
     console.log("input",input)
 }
 const addNewProduct=()=>{
-dispatch (addProductApi(input.title, input.description,input.imageUrl ,input.price, input.conseils, input.rating
+dispatch (addProductApi(input.title, input.description ,input.price, input.conseils, input.rating,input.imageUrl
     )) 
 console.log("input",input)
 setShow(false)
@@ -38,7 +38,7 @@ setShow(false)
 </Button>
 
 <Modal show={show} onHide={handleClose}>
-<Modal.Header closeButton>
+<Modal.Header>
 <Modal.Title className="title-modal">Add Item</Modal.Title>
 </Modal.Header>
 <Modal.Body>
@@ -53,25 +53,26 @@ setShow(false)
 </Form.Group>
 
 
-<Form.Group controlId="formBasicPassword">
-<Form.Label>Image</Form.Label>
-<Form.Control type="text" placeholder="enter image"  name='imageUrl' onChange={hanleChange}   />
-</Form.Group>
+
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Prix</Form.Label>
-<Form.Control type="number" placeholder="enter your advice"  name='price' onChange={hanleChange}   />
+<Form.Control type="number" placeholder="enter price"  name='price' onChange={hanleChange}   />
 </Form.Group>
 
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Conseils</Form.Label>
-<Form.Control type="text" placeholder="enter conseils"  name='conseils' onChange={hanleChange}   />
+<Form.Control type="text" placeholder="enter conseils"  name='conseils' onChange={hanleChange}/>
 </Form.Group>
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Rating</Form.Label>
-<Form.Control type="number" placeholder="enter rating"  name='rating' onChange={hanleChange}   />
+<Form.Control type="number" placeholder="enter rating"  name='rating' onChange={hanleChange}/>
+</Form.Group>
+<Form.Group controlId="formBasicPassword">
+<Form.Label>Image</Form.Label>
+<Form.Control type="text" placeholder="enter image"  name='imageUrl' onChange={hanleChange}/>
 </Form.Group>
 
 <Button className="ms-3  mt-3" variant="secondary" onClick={handleClose}>  

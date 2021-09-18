@@ -55,6 +55,7 @@ body {
     }
     .col-3 {
       flex-basis: 25%;
+      /* margin-left: 80px; */
       color: black;
       font-family:'Courier New', Courier, monospace ;
     }
@@ -84,7 +85,8 @@ body {
         }
         .input {
           width: 40px;
-          margin-left: -80px !important;
+          margin-left: 70px;
+          /* margin-left: -80px !important; */
         }
         /******************************************************validation order ***********************************/
 
@@ -133,7 +135,16 @@ body {
             display: block;
             max-width: 100%;
             height: auto;
+            /* margin-left: 60px; */
           }
+          .imgP{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-left: 60px;
+            
+          }
+         
         
         
         .cardd__title {
@@ -214,3 +225,6 @@ body {
           font-family: cursive;
           
         } */
+
+
+        

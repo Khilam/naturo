@@ -42,20 +42,20 @@ const Cart = ({history}) => {
         <h2>Votre panier</h2>
         <ul class="responsive-table">
           <li class="table-header">
-            <div class="col col-1">Produit</div>
-            <div class="col col-3">Prix</div>
-            <div class="col col-1">Image</div>
+            <div class="col col-3">Produit</div>
+            <div class="col col-2">Prix</div>
+            <div class="col col-3">Image</div>
             <div class="col col-3">Quantité</div>
             <div class="col col-1">Somme</div>
-            {/* <div class="col col-2"></div> */}
+            {/* <div class="col col-2">Supprimer</div> */}
           </li>
-
+         
           <tbody className="panier">
             {cart.map((item) => (
               <CartItems item={item} />
             ))}
           </tbody>
-        </ul>
+          </ul>
 
         <h4 className="total">Cart Summary</h4>
         <div className="summary__price">

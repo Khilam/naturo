@@ -11,6 +11,7 @@ import './dashboard.css'
 import PapresDashboard from './papersDashboard/papersDashboard'
 import ProductsDashboard from './product/productDashboard'
 import OrdersDashboard from './Orders/ordersDashboard.js'
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 
 
@@ -34,36 +35,43 @@ const Dashboard = () => {
         
        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
   <Row>
-    <Col sm={2} className="sideBar">
+    <Col sm={1} className="sideBar">
       <Nav variant="pills" className="flex-column">
-      <Nav.Item>
+      {/* <Nav.Item>
       <Nav.Link className="titre-dash" eventKey="first"><FaPagelines/> NATUROPATHIE </Nav.Link> 
     
-        </Nav.Item>
+        </Nav.Item> */}
         <Nav.Item >
           <Nav.Link  calssName="firstt" eventKey="second"><ListIcon/>Papers </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link calssName="third" eventKey="third"><ListIcon/> Commandes</Nav.Link>
+          <Nav.Link calssName="firstt" eventKey="third"><ListIcon/> Orders</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link calssName="fourth" eventKey="fourth"><ListIcon/>Produits</Nav.Link>
+          <Nav.Link calssName="firstt" eventKey="fourth"><ListIcon/>Items</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-        <button className="bouton-dash"
+        <ExitToAppIcon  className="bouton-dash"
         onClick={() => {
           dispatch(logout())
           history.push('/sign')
         }}
       >
-        Déconnexion
-      </button>
+         </ExitToAppIcon>
+        {/* Déconnexion
+      </button> */}
         </Nav.Item>
       </Nav>
     </Col>
-    <Col sm={10}>
+    <Col sm={11}>
       <Tab.Content>
+      <Nav.Item>
+      <Nav.Link className="titre-dash" eventKey="first"><FaPagelines/> NATUROPATHIE </Nav.Link> 
+    
+        </Nav.Item>
       <Tab.Pane calssName=" first" eventKey="first">
+
+     
          <h1 className="welcom-dash">Welcome to your dashboard Mouna</h1>
         </Tab.Pane>
         <Tab.Pane calssName=" firstt" eventKey="second">

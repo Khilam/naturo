@@ -17,37 +17,37 @@
     margin-right: 1px;
 }
 .dash-titr-catégo{
-    width: 30px;
+    width: 20px !important;
     margin-left: 3px;
     margin-right: 3px;
 }
 .dash-titr-op{
-    width: 100px;
+    width: 150px;
     margin-left: 1px;
     margin-right: 1px;
 }
  .dash-titr-id{
-    width: 20px;
+    width: 40px;
     margin-left: 3px;
     margin-right: 3px;
 }
 .dash-titr-titr{
-    width: 150px;
+    width: 230px;
     margin-left: 3px;
     margin-right: 3px;
 }
 .dash-titr-cont{
-    width: 150px;
+    width: 130px;
     margin-left: 3px;
     margin-right: 3px;
 } 
 .dash-titr-img{
-    width: 50px;
+    width: 70px;
 }
 .table-sm{
     margin-top: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left:5px;
+    margin-right: 5px;
 }
 .dash-paper-delete{
    color:red;

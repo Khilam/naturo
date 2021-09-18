@@ -6,7 +6,7 @@ import {addNewProduct,getAllProducts, deleteProducts,updateProducts}   from "../
 
 export const addProductApi=(title, description,rating, imageUrl,conseils, price )=> async (dispatch) =>{
     try{
-        const res=await addNewProduct (title, description,rating, imageUrl,conseils, price );
+        const res=await addNewProduct (title, description,conseils, price,rating, imageUrl );
         dispatch ({
             type:POST_PRODUCT,
             payload:res.data
@@ -47,7 +47,7 @@ export const deleteProduct = (id)=> async (dispatch) => {
 // update Menu
 export const updateProduct = (id,title, description,imageUrl,conseils, price, rating ) => async dispatch => {
     try {
-      const res = await axios.put(`http://localhost:4005/app/product/${id}`,{title, description,imageUrl,conseils, price, rating}) 
+      const res = await axios.put(`http://localhost:4005/app/product/${id}`,{title, description,conseils, price, rating,imageUrl}) 
        
       dispatch({
         type: PUT_PRODUCT, 

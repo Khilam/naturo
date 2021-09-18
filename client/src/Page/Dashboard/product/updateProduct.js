@@ -42,8 +42,8 @@ const UpdateProduct = ({el,id}) => {
   <EditIcon className="dash-paper-edit" onClick={handleShow}/>
 
 <Modal show={show} onHide={handleClose}>
-<Modal.Header closeButton>
-<h3>Modifier Prodiut</h3>
+<Modal.Header>
+<h3>Modifier Produit</h3>
 </Modal.Header>
 <Modal.Body>
 <Form >
