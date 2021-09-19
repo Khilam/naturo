@@ -14,7 +14,7 @@ const UpdateProduct = ({el,id}) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const dispatch = useDispatch()
-    const [update,setupdate]=useState({title:el.title,conseils:el.conseils,imageUrl:el.imageUrl,description:el.description, price:el.price})
+    const [update,setupdate]=useState({title:el.title,conseils:el.conseils,imageUrl:el.imageUrl,description:el.description, price:el.price, rating:el.rating})
     // handelInput
     const handleChange=(e)=>{
         const {name,value}=e.target
@@ -27,7 +27,7 @@ const UpdateProduct = ({el,id}) => {
     // update Menu
 
     const updateproduct=()=>{
-        dispatch (updateProduct(id,update.title , update.description, update.imageUrl,update.conseils, update.price , update.rating)) 
+        dispatch (updateProduct(id,update.title , update.description, update.rating, update.imageUrl,update.conseils, update.price )) 
         console.log("update",update)
         setShow(false)
         }
@@ -74,7 +74,7 @@ const UpdateProduct = ({el,id}) => {
 
 <Form.Group controlId="formBasicPassword">
 <Form.Label>Rating</Form.Label>
-<Form.Control type="number" placeholder="enter rating"  name='rating' onChange={handleChange}/>
+<Form.Control type="number" placeholder="enter rating"  name='rating'  defaultValue={el.rating}  onChange={handleChange}/>
 </Form.Group>
 
 <Button className="ms-3  mt-3" variant="secondary" onClick={handleClose}>  

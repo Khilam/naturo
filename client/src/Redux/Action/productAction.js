@@ -4,9 +4,9 @@ import * as actionTypes from "../Const/productConst"
 
 import {addNewProduct,getAllProducts, deleteProducts,updateProducts}   from "../requestproduct"
 
-export const addProductApi=(title, description,rating, imageUrl,conseils, price )=> async (dispatch) =>{
+export const addProductApi=(title, description, rating, imageUrl,conseils, price )=> async (dispatch) =>{
     try{
-        const res=await addNewProduct (title, description,conseils, price,rating, imageUrl );
+        const res=await addNewProduct (title, description, rating, imageUrl,conseils, price);
         dispatch ({
             type:POST_PRODUCT,
             payload:res.data
@@ -45,9 +45,9 @@ export const deleteProduct = (id)=> async (dispatch) => {
     }
   };
 // update Menu
-export const updateProduct = (id,title, description,imageUrl,conseils, price, rating ) => async dispatch => {
+export const updateProduct = (id,title, description, rating, imageUrl,conseils, price ) => async dispatch => {
     try {
-      const res = await axios.put(`http://localhost:4005/app/product/${id}`,{title, description,conseils, price, rating,imageUrl}) 
+      const res = await axios.put(`http://localhost:4005/app/product/${id}`,{title, description, rating, imageUrl,conseils, price }) 
        
       dispatch({
         type: PUT_PRODUCT, 

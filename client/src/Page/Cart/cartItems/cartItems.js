@@ -30,7 +30,7 @@ const CartItems = ({ item }) => {
       <div key={item.id}>
         <div className="table-row">
           
-          <td className="col col-3">{item.title.substring(0, 25)}</td>
+          <td className="col col-3">{item.title.substring(0, 20)}</td>
           <td className="col col-1">{item.price}</td>
           <td>
             <img className="col col-3 imgP" src={item.imageUrl} alt="" />

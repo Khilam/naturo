@@ -57,9 +57,9 @@ const Cart = ({history}) => {
           </tbody>
           </ul>
 
-        <h4 className="total">Cart Summary</h4>
+        <h4 className="total">Contenu de votre panier</h4>
         <div className="summary__price">
-          <span>TOTAL: ({totalItems} items)</span>
+          <span>TOTAL: ({totalItems} produits)</span>
           <span>$ {totalPrice}</span>
         </div>
         <Button 

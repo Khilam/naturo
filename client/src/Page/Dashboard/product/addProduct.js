@@ -11,10 +11,10 @@ const AddProduct = () => {
     const handleShow = () => setShow(true);
     const dispatch = useDispatch()
 
+   
 
-
-const [input,setInput]=useState({title:"",description:"",price:"", conseils
-:"", rating:"",  imageUrl:"" })
+const [input,setInput]=useState({title:"",description:"", rating:"", imageUrl:"" , conseils
+:"", price:"" })
 
 const hanleChange=(e)=>{
     const {name,value}=e.target
@@ -25,7 +25,7 @@ const hanleChange=(e)=>{
     console.log("input",input)
 }
 const addNewProduct=()=>{
-dispatch (addProductApi(input.title, input.description ,input.price, input.conseils, input.rating,input.imageUrl
+dispatch (addProductApi(input.title, input.description , input.rating, input.imageUrl,  input.conseils, input.price
     )) 
 console.log("input",input)
 setShow(false)
