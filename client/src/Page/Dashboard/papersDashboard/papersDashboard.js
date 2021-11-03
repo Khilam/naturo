@@ -36,7 +36,7 @@ const PapresDashboard = ()=>{
         <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr className="dash-titr">
-                <th className="dash-titr-id">ID</th>
+                {/* <th className="dash-titr-id">ID</th> */}
                 <th className="dash-titr-titr">Titre</th>
                 <th className="dash-titr-cont">Contenu</th>
                 <th className="dash-titr-catégo">Catégorie</th>
@@ -48,7 +48,7 @@ const PapresDashboard = ()=>{
            
               {paper.map((paper) => (
                 <tr key={paper._id}>
-                  <td className="paper-dash">{paper._id}</td>
+                  {/* <td className="paper-dash">{paper._id}</td> */}
                   <td className="paper-dash">{paper.titre}</td>
                   <td className="paper-dash">{paper.contenu.substring(0, 150)}...</td>
                   <td className="paper-dash">{paper.catégorie}</td>

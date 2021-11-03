@@ -34,7 +34,7 @@ const ProductsDashboard = ()=>{
         <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr className="dash-titr">
-                <th className="dash-titr-id">ID</th>
+                {/* <th className="dash-titr-id">ID</th> */}
                 <th className="dash-titr-titr">Titre</th>
                 <th className="dash-titr-cont">Déscription</th>
                 <th className="dash-titr-cont">Conseils</th>
@@ -49,7 +49,7 @@ const ProductsDashboard = ()=>{
            
               {product.map((product) => (
                 <tr key={product._id}>
-                  <td className="paper-dash">{product._id}</td>
+                  {/* <td className="paper-dash">{product._id}</td> */}
                   <td className="paper-dash">{product.title}</td>
                   <td className="paper-dash">{product.description.substring(0, 50)}...</td>
                   <td className="paper-dash">{product.conseils}</td>

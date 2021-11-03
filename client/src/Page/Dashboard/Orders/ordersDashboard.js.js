@@ -39,7 +39,7 @@ const OrdersDashboard = ()=>{
         <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr className="dash-titr">
-                <th className="dash-titr-id">ID</th>
+                {/* <th className="dash-titr-id">ID</th> */}
                 <th className="dash-titr-titr">Produits</th>
                 <th className="dash-titr-cont">Nom et prénom</th>
                 <th className="dash-titr-catégo">Adresse</th>
@@ -53,7 +53,7 @@ const OrdersDashboard = ()=>{
            
               {mouna.map((order) => (
                 <tr key={order._id}>
-                  <td className="paper-dash">{order._id}</td>
+                  {/* <td className="paper-dash">{order._id}</td> */}
                   <td className="paper-dash">{order.orderItems.map((x)=>(
                    <p className="comm" >{x.title}</p>))}
                  </td>  
